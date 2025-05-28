@@ -2,11 +2,13 @@ package Friend;
 
 public class Friend {
     
-    String friendName;
+    String fristName;
+    String lastName;
     int friendAge;
 
-    public Friend(String friendName, int friendAge) {
-        this.friendName = friendName;
+    public Friend(String fristName, String lastName, int friendAge) {
+        this.fristName = fristName;
+        this.lastName = lastName;
         this.friendAge = friendAge;
     }
 
