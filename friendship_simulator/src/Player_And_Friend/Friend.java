@@ -1,23 +1,10 @@
 package Player_And_Friend;
 
-public class Friend {
+public class Friend extends Player {
 
-    public enum Gender {
-        FEMALE,
-        MALE,
-        NON_BINARY
-    }
-    
-    public String firstName;
-    public String lastName;
-    public Gender gender;
-    public int age;
 
-    public Friend(String firstName, String lastName, Gender gender, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.age = age;
+    public Friend(String firstName, String lastName, Gender gender, int age, int confidence, Smell smell) {
+        super(firstName, lastName, gender, age, confidence, smell);
     }
 
     public String getFirstName() {
