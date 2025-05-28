@@ -1,25 +1,25 @@
-package Player;
+package Player_And_Friend;
 
 public class Player {
 
-        public enum Gender {
+    public enum Gender {
         FEMALE,
         MALE,
         NON_BINARY
     }
 
-        public enum Smell {
+    public enum Smell {
         BAD,
         OK,
-        GREATE
+        GREAT
     }
 
-    String firstName;
-    String lastName;
-    Gender gender;
-    int age;
-    int confidence;
-    Smell smell;
+    public String firstName;
+    public String lastName;
+    public Gender gender;
+    public int age;
+    public int confidence;
+    public Smell smell;
 
     public Player (String firstName, String lastName, Gender gender, int age, int confidence, Smell smell) {
         
