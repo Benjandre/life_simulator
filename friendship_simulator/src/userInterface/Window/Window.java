@@ -1,4 +1,4 @@
-package Interface.Window;
+package userInterface.Window;
 
 public class Window {
     
