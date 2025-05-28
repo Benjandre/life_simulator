@@ -17,6 +17,10 @@ public class Call {
         this.isActive = true; // Call is active when created
     }
 
+    public void call() {
+        isActive = true; // Set the call as active
+    }
+
     public void endCall() {
         this.isActive = false; // End the call
     }
