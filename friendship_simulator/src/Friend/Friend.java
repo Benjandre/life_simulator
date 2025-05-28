@@ -8,18 +8,18 @@ public class Friend {
         NON_BINARY
     }
     
-    String fristName;
+    String firstName;
     String lastName;
     int friendAge;
 
-    public Friend(String fristName, String lastName, int friendAge) {
-        this.fristName = fristName;
+    public Friend(String firstName, String lastName, int friendAge) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.friendAge = friendAge;
     }
 
     public String getFirstName() {
-        return fristName;
+        return firstName;
     }
 
     public String getLastName() {
