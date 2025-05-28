@@ -4,7 +4,8 @@ public class Player {
 
         public enum Gender {
         FEMALE,
-        MALE
+        MALE,
+        NON_BINARY
     }
 
         public enum Smell {
