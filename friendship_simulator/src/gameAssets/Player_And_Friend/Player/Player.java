@@ -1,4 +1,4 @@
-package gameAssets.Player_And_Friend;
+package gameAssets.Player_And_Friend.Player;
 
 public class Player {
 
@@ -14,14 +14,21 @@ public class Player {
         GREAT
     }
 
+    public enum Bladder {
+        EMPTY,
+        MODERATE,
+        FULL
+    }
+
     public String firstName;
     public String lastName;
     public Gender gender;
     public int age;
     public int confidence;
     public Smell smell;
+    public Bladder bladder;
 
-    public Player (String firstName, String lastName, Gender gender, int age, int confidence, Smell smell) {
+    public Player (String firstName, String lastName, Gender gender, int age, int confidence, Smell smell, Bladder bladder) {
         
         this.firstName = firstName;
         this.lastName = lastName;

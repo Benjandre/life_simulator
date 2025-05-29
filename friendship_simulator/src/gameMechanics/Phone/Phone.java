@@ -1,9 +1,10 @@
 package gameMechanics.Phone;
 
 import java.util.ArrayList;
-import gameAssets.Player_And_Friend.Player;
+
 import gameAssets.Player_And_Friend.Contact;
 import gameAssets.Player_And_Friend.Message;
+import gameAssets.Player_And_Friend.Player.Player;
 
 public class Phone {
 

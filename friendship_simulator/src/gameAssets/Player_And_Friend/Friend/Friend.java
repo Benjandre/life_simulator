@@ -1,4 +1,8 @@
-package gameAssets.Player_And_Friend;
+package gameAssets.Player_And_Friend.Friend;
+
+import gameAssets.Player_And_Friend.Player.Player;
+import gameAssets.Player_And_Friend.Player.Player.Gender;
+import gameAssets.Player_And_Friend.Player.Player.Smell;
 
 public class Friend extends Player {
 

@@ -1,6 +1,8 @@
 package gameMechanics.Phone;
 
 import gameAssets.Player_And_Friend.*;
+import gameAssets.Player_And_Friend.Friend.Friend;
+import gameAssets.Player_And_Friend.Player.Player;
 
 public class Call {
 
