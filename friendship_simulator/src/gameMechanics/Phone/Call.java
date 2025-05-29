@@ -17,7 +17,8 @@ public class Call {
         this.isActive = true; // Call is active when created
     }
 
-    public void call() {
+    public void call(Friend receiver) {
+        this.receiver = receiver; // Set the receiver of the call
         isActive = true; // Set the call as active
     }
 
