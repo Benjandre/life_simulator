@@ -7,8 +7,8 @@ import gameAssets.Player_And_Friend.Player.Player.Smell;
 public class Friend extends Player {
 
 
-    public Friend(String firstName, String lastName, Gender gender, int age, int confidence, Smell smell) {
-        super(firstName, lastName, gender, age, confidence, smell);
+    public Friend(String firstName, String lastName, Gender gender, int age, int confidence, Smell smell, Bladder bladder) {
+        super(firstName, lastName, gender, age, confidence, smell, bladder);
     }
 
     public String getFirstName() {
