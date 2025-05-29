@@ -1,6 +1,6 @@
 package gameAssets.Places_Rooms_Items.Rooms;
 
-public class Bathroom {
+public class Bathroom extends Room {
     Shower shower;
     Mirror mirror;
 
