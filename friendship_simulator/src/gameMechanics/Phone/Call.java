@@ -18,18 +18,31 @@ public class Call {
     }
 
     public void call(Friend receiver) {
-        this.receiver = receiver; // Set the receiver of the call
-        isActive = true; // Set the call as active
+        this.receiver = receiver;
+        if (receiver != null) {
+            isActive = true;
+            System.out.println("Calling " + receiver.getFirstName() + "" + receiver.getLastName() + " at " + receiver.getPhoneNumber());
+        } else {
+            isActive = false;
+            System.out.println("Error: You cannot call a non-existent contact.");
+            return;
+        }
     }
 
-    public void endCall() {
-        this.isActive = false; // End the call
+    public void endCall(Friend receiver) {
+        if (isActive == true) {
+            isActive = false;
+            System.out.println("Call ended with " + receiver.getFirstName() + "" + receiver.getLastName() + ".");
+            addCallToHistory(receiver);
+        } else {
+            System.out.println("Error: You cannot end a call that is not active.");
+        }
+        
     }
 
-    public void addCallToHistory() {
-        if (!isActive) {
-            // Logic to add the call to the call history of the caller
-            caller.addCallToHistory(this);
+    public void addCallToHistory(Friend receiver) {
+        if (isActive == false && receiver != null) {
+            addCallToHistory(receiver);
         }
     }
     

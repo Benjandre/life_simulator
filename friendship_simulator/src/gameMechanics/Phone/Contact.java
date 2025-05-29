@@ -16,21 +16,16 @@ public class Contact {
     }
 
     // Getters
-    public String getName() {
-        return name;
+    public String getfirstName() {
+        return firstName.toString();
+    }
+
+    public String getLastName() {
+        return lastName.toString();
     }
 
     public String getPhoneNumber() {
         return phoneNumber;
-    }
-
-    // Setters
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
     
 }
