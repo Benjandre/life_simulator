@@ -8,7 +8,13 @@ public class Player {
         NON_BINARY
     }
 
-    public enum Smell {
+    public enum oralHygiene {
+        BAD,
+        OK,
+        GOOD
+    }
+
+    public enum bodySmell {
         BAD,
         OK,
         GREAT
@@ -23,19 +29,20 @@ public class Player {
     public String firstName;
     public String lastName;
     public Gender gender;
+    public oralHygiene oralHygiene;
     public int age;
     public int confidence;
-    public Smell smell;
+    public bodySmell bodySmell;
     public Bladder bladder;
 
-    public Player (String firstName, String lastName, Gender gender, int age, int confidence, Smell smell, Bladder bladder) {
+    public Player (String firstName, String lastName, Gender gender, int age, int confidence, bodySmell bodySmell, Bladder bladder) {
         
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
         this.confidence = confidence;
-        this.smell = smell;
+        this.bodySmell = bodySmell;
 
     }
 
@@ -59,8 +66,8 @@ public class Player {
         return confidence;
     }
 
-    public Smell getSmell() {
-        return smell;
+    public bodySmell getBodySmell() {
+        return bodySmell;
     }
 
     public void boostConfidence() {
