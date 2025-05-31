@@ -29,20 +29,22 @@ public class Player {
     public String firstName;
     public String lastName;
     public Gender gender;
-    public oralHygiene oralHygiene;
     public int age;
     public int confidence;
+    public oralHygiene oralHygiene;
     public bodySmell bodySmell;
     public Bladder bladder;
 
-    public Player (String firstName, String lastName, Gender gender, int age, int confidence, bodySmell bodySmell, Bladder bladder) {
+    public Player (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder) {
         
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
         this.confidence = confidence;
+        this.oralHygiene = oralHygiene; // Default value
         this.bodySmell = bodySmell;
+        this.bladder = bladder; // Default value
 
     }
 
@@ -66,16 +68,11 @@ public class Player {
         return confidence;
     }
 
+    public oralHygiene getOralHygiene() {
+        return oralHygiene;
+    }
+
     public bodySmell getBodySmell() {
         return bodySmell;
     }
-
-    public void boostConfidence() {
-        if (confidence < Integer.MAX_VALUE) {
-            confidence++;
-        } else {
-            throw new IllegalStateException("Confidence is already at maximum value.");
-        }
-    }
-    
 }
