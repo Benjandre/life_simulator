@@ -62,8 +62,14 @@ public class Room {
     }
 
     public void cleanRoom() {
-        System.out.println("Cleaning the " + roomName + "...");
-        // Logic for cleaning the room can be added here
+        if (roomCleanliness == roomCleanliness.DIRTY) {
+            System.out.println("You clean the room.");
+            roomCleanliness = roomCleanliness.CLEAN; // Set the room to clean after cleaning
+        } else if (roomCleanliness == roomCleanliness.CLEAN) {
+            System.out.println("The room is already clean. No need to clean.");
+        } else {
+            System.out.println("The room is dusty. You can vacuum it to remove dust.");
+        }
     }
     
 }
