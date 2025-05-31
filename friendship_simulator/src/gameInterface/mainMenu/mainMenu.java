@@ -32,21 +32,23 @@ public class mainMenu {
         return exitGame;
     }
 
-    public void selectItemInMenu(String selectedMenuItem) {
+    public void selectItemInMenu() {
         Scanner menuItem = new Scanner(System.in);
-        selectedMenuItem = menuItem.nextLine().trim();
-        if (selectedMenuItem == "1") {
-                System.out.println("Starting the game...");
+        System.out.println("");
+        String selectedMenuItem = menuItem.nextLine().trim();
+        try {
+            if (selectedMenuItem.equals("1")) {
                 startGame();
-        } else if (selectedMenuItem == "2") {
-                System.out.println("Opening options...");
+            } else if (selectedMenuItem.equals("2")) {
                 openOptions();
-        } else if (selectedMenuItem == "3") {
-                System.out.println("Exiting the game...");
+            } else if (selectedMenuItem.equals("3")) {
                 exitGame();
-        } else {
+            } else {
                 System.out.println("Invalid option. Please try again.");
                 return;
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred: " + e.getMessage());
         }
     }
 
