@@ -2,8 +2,8 @@ package gameAssets.Places_Rooms_Items.Rooms.Home.Kitchen;
 
 public class Kitchen extends Room {
 
-    public Kitchen(String roomName, int roomLength, int roomHeight) {
-        super(roomName, roomLength, roomHeight);
+    public Kitchen(String roomName, int roomLength, int roomHeight, roomCleanliness roomCleanliness) {
+        super(roomName, roomLength, roomHeight, roomCleanliness);
     }
 
     // Additional methods specific to Kitchen can be added here
