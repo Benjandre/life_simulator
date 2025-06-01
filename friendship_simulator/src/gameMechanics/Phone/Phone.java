@@ -2,8 +2,8 @@ package gameMechanics.Phone;
 
 import java.util.ArrayList;
 
-import gameAssets.Player_And_Friend.Contact;
-import gameAssets.Player_And_Friend.Message;
+import gameMechanics.Phone.Contact;
+import gameMechanics.Phone.Message;
 import gameAssets.Player_And_Friend.Player.Player;
 
 public class Phone {

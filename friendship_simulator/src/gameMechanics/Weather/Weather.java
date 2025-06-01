@@ -21,7 +21,16 @@ public class Weather {
     }
 
     public void changeWeather(WeatherType newWeather) {
-        currentWeather = newWeather;
+        if (newWeather == currentWeather) {
+            System.out.println("The weather is already " + newWeather + ".");
+            return;
+        } else if (newWeather == null) {
+            throw new IllegalArgumentException("Weather type cannot be null");
+        } else {
+            currentWeather = newWeather;
+            System.out.println("The weather has changed from " + currentWeather + " to " + newWeather + ".");
+        }
+        
     }
     
 }
