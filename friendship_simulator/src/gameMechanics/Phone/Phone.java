@@ -87,12 +87,43 @@ public class Phone {
         }
     }
 
+    public void displayAllContacts() {
+        try {
+            if (!contacts.isEmpty()) {
+                for (Contact contact : contacts) {
+                System.out.println(contact);
+                }
+            } else {
+                System.out.println("You have no contacts in your contact list.");
+            }
+        }  catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
+        }
+    }
+
     public void addContact(Contact contact) {
-        contacts.add(contact);
+        try { 
+            if (isOn == true && !contacts.contains(contact)) {
+                contacts.add(contact);
+                System.out.println("You added " + contact.getfirstName() + "" + contact.getLastName() + " to your contact list.");
+        } else if (isOn == true && contacts.contains(contact)) {
+            System.out.println("You already have " + contact.getfirstName() + "" + contact.getLastName() + " in your contact list.");
+        }} catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
+        }
     }
 
     public void removeContact(Contact contact) {
-        contacts.remove(contact);
+        try {
+            if (isOn == true && contacts.contains(contact)) {
+                contacts.remove(contact);
+                System.out.println("You removed " + contact.getfirstName() + "" + contact.getLastName() + " from your contact list.");
+            } else if (isOn == true && !contacts.contains(contact)) {
+                System.out.println(contact.getfirstName() + "" + contact.getLastName() + " isn't is your contact list, so you can't remove them.");
+            }
+        } catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
+        }
     }
     
     public Player getOwner() {

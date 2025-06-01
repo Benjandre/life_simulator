@@ -23,6 +23,7 @@ public class Friendship {
         this.player = player;
         this.friend = friend;
         this.currentFriendshipLevel = MIN_FRIENDSHIP_LEVEL; // Initial friendship level
+        this.areFriends = true;
     }
 
     public int getFriendshipLevel() {
@@ -62,7 +63,7 @@ public class Friendship {
                 areFriends = false;
                 System.out.println("You ended your friendship with " + friend.firstName + "" + friend.getLastName());
             } else {
-                System.out.println("You aren't friends with " + friend.firstName + "" + friend.lastName);
+                System.out.println("You aren't friends with " + friend.firstName + "" + friend.lastName + ".");
             }
         } catch (Exception exception) {
             System.out.println("An unexpected error occurred: " + exception.getMessage());
