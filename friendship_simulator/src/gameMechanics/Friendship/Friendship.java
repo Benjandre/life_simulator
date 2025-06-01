@@ -29,7 +29,7 @@ public class Friendship {
         return currentFriendshipLevel;
     }
 
-    public void increaseFriendship(Friendship friendship) {
+    public void strengthenFriendship(Friendship friendship) {
         try {
             if (areFriends = true && currentFriendshipLevel != MAX_FRIENDSHIP_LEVEL) {
                 currentFriendshipLevel++;
@@ -44,15 +44,16 @@ public class Friendship {
         }
     }
 
-    public void decreaseFriendship(int amount) {
-        if (amount < 0) {
-            throw new IllegalArgumentException("Amount to decrease friendship cannot be negative");
+    public void weakenFriendship(Friendship friendship) {
+        try {
+            if (areFriends = true && currentFriendshipLevel != MIN_FRIENDSHIP_LEVEL) {
+                currentFriendshipLevel--;
+                System.out.println("Your friendship with " + friend.getFirstName() + "" + friend.getLastName() + " weakened.");
+            } else {
+                System.out.println("You aren't friends with " + friend.getFirstName() + "" + friend.getLastName() + ".");
+            }} catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
         }
-        currentFriendshipLevel -= amount;
-        if (currentFriendshipLevel < 0) {
-            currentFriendshipLevel = 0; // Ensure friendship level does not go below zero
-        }
-        System.out.println("Friendship level decreased by " + amount + ". Current level: " + currentFriendshipLevel);
     }
 
     public void endFriendship(Friend friend) {
