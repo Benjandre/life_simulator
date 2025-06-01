@@ -6,17 +6,27 @@ import gameAssets.Player_And_Friend.Player.Player;
 
 public class Call {
 
-    private Player caller;
-    private Friend receiver;
-    private int callDuration;
-    private boolean isActive;
+    public Player caller;
+    public Friend receiver;
+    public int amountOfWordsSpoken;
+    public boolean isActive;
+
+    public enum wordsToSay {
+        GREET,
+        TALK_ABOUT_ALL_KINDS_OF_THINGS,
+        TALK_ABOUT_LIFE,
+        TALK_ABOUT_PRIVATE_STUFF,
+        SAY_GOODBYE
+    }
+
+    public wordsToSay wordToSay;
 
     // Constructor
     public Call(Player caller, Friend receiver) {
         this.caller = caller;
         this.receiver = receiver;
-        this.callDuration = 0; // Call duration starts at 0
-        this.isActive = true; // Call is active when created
+        this.amountOfWordsSpoken = 0;
+        this.isActive = true;
     }
 
     public void call(Friend receiver) {
@@ -29,6 +39,10 @@ public class Call {
             System.out.println("Error: You cannot call a non-existent contact.");
             return;
         }
+    }
+
+    public void saySomething() {
+
     }
 
     public void endCall(Friend receiver) {

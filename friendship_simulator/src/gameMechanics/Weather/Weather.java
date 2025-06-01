@@ -10,7 +10,7 @@ public class Weather {
         CLOUDY
     }
 
-    private WeatherType currentWeather;
+    public WeatherType currentWeather;
 
     public Weather(WeatherType currentWeather) {
         this.currentWeather = currentWeather;

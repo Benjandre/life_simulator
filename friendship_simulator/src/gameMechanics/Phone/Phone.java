@@ -5,20 +5,21 @@ import java.util.Scanner;
 
 import gameMechanics.Phone.Contact;
 import gameMechanics.Phone.Message;
+import gameMechanics.Phone.Message.messageType;
+import gameMechanics.Phone.Call;
 import gameAssets.Player_And_Friend.Player.Player;
 
 public class Phone {
 
     private Player owner;
+    private Call call;
     private ArrayList<Contact> contacts;
     private ArrayList<Message> messages;
-    private ArrayList<String> callHistory;
+    private ArrayList<Call> callHistory;
     private boolean isOn;
-    private String phoneNumber;
 
-    public Phone(Player owner, String phoneNumber) {
+    public Phone(Player owner) {
         this.owner = owner;
-        this.phoneNumber = phoneNumber;
         this.contacts = new ArrayList<>();
         this.messages = new ArrayList<>();
         this.callHistory = new ArrayList<>();
@@ -51,31 +52,37 @@ public class Phone {
         }
     }
 
-    public void call(Contact contact) {
-        if (isOn == true && contact != null) {
+    public void call (Contact contact) {
+        try {
+            if (isOn == true && call.isActive == false && contact != null) {
+            call.isActive = true;
             // Logic to initiate a call to the receiver
             System.out.println("Calling " + contact.getfirstName() + "" + contact.getLastName() + " at " + contact.getPhoneNumber());
             // Add call to history
             callHistory.add("Call to " + contact.getfirstName() + "" + contact.getLastName() +  " at " + contact.getPhoneNumber());
         } else {
             System.out.println("Phone is off. Please turn it on to make a call.");
-            
+        }} catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
         }
-
     }
 
-    public void sendMessage(Contact contact, String messageContent) {
+    // This needs fixing.
+    public void sendMessage(Contact contact, messageType messageType) {
         try {
             if (contact == null) {
                 throw new IllegalArgumentException("Contact cannot be null");
             }
-            if (messageContent == null || messageContent.isEmpty()) {
+            if (messageType == null || messageType.equals("")) {
                 throw new IllegalArgumentException("Message content cannot be null or empty");
             } else {
                 if (isOn == true) {
-                    Scanner messageInput = new Scanner(System.in);
-                    System.out.println("Enter your message to " + contact.getfirstName() + " " + contact.getLastName() + ": ");
-                    messageContent = messageInput.nextLine();
+                    Scanner type = new Scanner(System.in);
+                    System.out.println("What kind of message would you like to send to " + contact.getfirstName() + " " + contact.getLastName() + "?: ");
+                    System.out.println("1. Positive.");
+                    System.out.println("2. Negative.");
+                    System.out.println("3. Neutral.");
+                    input = messageType.nextInt();
                     Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageContent);
                     messages.add(message);
                     System.out.println("Message sent to " + contact.getfirstName() + " " + contact.getLastName() + ": " + messageContent);
