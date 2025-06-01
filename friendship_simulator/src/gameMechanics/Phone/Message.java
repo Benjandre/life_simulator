@@ -4,14 +4,14 @@ public class Message {
 
     private String sender;
     private String receiver;
-    private String content;
+    private String messageContent;
     private long timestamp;
 
     // Constructor
-    public Message(String sender, String receiver, String content) {
+    public Message(String sender, String receiver, String messageContent) {
         this.sender = sender;
         this.receiver = receiver;
-        this.content = content;
+        this.messageContent = messageContent;
         this.timestamp = System.currentTimeMillis(); // Set the current time as the timestamp
     }
 
@@ -24,8 +24,8 @@ public class Message {
         return receiver;
     }
 
-    public String getContent() {
-        return content;
+    public String getMessageContent() {
+        return messageContent;
     }
 
     public long getTimestamp() {

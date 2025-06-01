@@ -1,6 +1,7 @@
 package gameMechanics.Phone;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import gameMechanics.Phone.Contact;
 import gameMechanics.Phone.Message;
@@ -48,17 +49,42 @@ public class Phone {
         }
     }
 
-    public void call(Contact receiver){
-        if (isOn == true && receiver != null) {
+    public void call(Contact contact) {
+        if (isOn == true && contact != null) {
             // Logic to initiate a call to the receiver
-            System.out.println("Calling " + receiver.getName() + " at " + receiver.getPhoneNumber());
+            System.out.println("Calling " + contact.getfirstName() + "" + contact.getLastName() + " at " + contact.getPhoneNumber());
             // Add call to history
-            callHistory.add("Call to " + receiver.getName() + " at " + receiver.getPhoneNumber());
+            callHistory.add("Call to " + contact.getfirstName() + "" + contact.getLastName() +  " at " + contact.getPhoneNumber());
         } else {
             System.out.println("Phone is off. Please turn it on to make a call.");
             
         }
 
+    }
+
+    public void sendMessage(Contact contact, String messageContent) {
+        try {
+            if (contact == null) {
+                throw new IllegalArgumentException("Contact cannot be null");
+            }
+            if (messageContent == null || messageContent.isEmpty()) {
+                throw new IllegalArgumentException("Message content cannot be null or empty");
+            } else {
+                if (isOn == true) {
+                    Scanner messageInput = new Scanner(System.in);
+                    System.out.println("Enter your message to " + contact.getfirstName() + " " + contact.getLastName() + ": ");
+                    messageContent = messageInput.nextLine();
+                    Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageContent);
+                    messages.add(message);
+                    System.out.println("Message sent to " + contact.getfirstName() + " " + contact.getLastName() + ": " + messageContent);
+                } else {
+                    System.out.println("Phone is off. Please turn it on to send a message.");
+                }
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return;
+        }
     }
 
     public void addContact(Contact contact) {
