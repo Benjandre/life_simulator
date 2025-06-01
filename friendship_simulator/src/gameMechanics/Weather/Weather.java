@@ -12,21 +12,16 @@ public class Weather {
 
     private WeatherType currentWeather;
 
-    public Weather(WeatherType initialWeather) {
-        this.currentWeather = initialWeather;
+    public Weather(WeatherType currentWeather) {
+        this.currentWeather = currentWeather;
     }
 
     public WeatherType getCurrentWeather() {
         return currentWeather;
     }
 
-    public void setCurrentWeather(WeatherType newWeather) {
-        this.currentWeather = newWeather;
-    }
-
-    @Override
-    public String toString() {
-        return "Current weather is: " + currentWeather.name();
+    public void changeWeather(WeatherType newWeather) {
+        currentWeather = newWeather;
     }
     
 }
