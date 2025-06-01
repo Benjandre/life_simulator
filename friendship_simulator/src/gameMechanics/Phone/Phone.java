@@ -29,6 +29,7 @@ public class Phone {
         if (isOn == false) {
 
             isOn = true;
+            System.out.println("You turned your phone on.");
 
         } else {
 
@@ -41,6 +42,7 @@ public class Phone {
         if (isOn == true) {
 
             isOn = false;
+            System.out.println("You turned your phone off.");
 
         } else {
 
