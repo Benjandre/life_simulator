@@ -67,33 +67,63 @@ public class Phone {
         }
     }
 
+    public void addCallToHistory(Call call) {
+        callHistory.add(call);
+        System.out.println("Call to " + call.receiver.getFirstName() + "" + call.receiver.getLastName() + " has been added to the call history.");
+    }
+
     // This needs fixing.
-    public void sendMessage(Contact contact, messageType messageType) {
-        try {
-            if (contact == null) {
-                throw new IllegalArgumentException("Contact cannot be null");
-            }
-            if (messageType == null || messageType.equals("")) {
-                throw new IllegalArgumentException("Message content cannot be null or empty");
-            } else {
-                if (isOn == true) {
-                    Scanner type = new Scanner(System.in);
-                    System.out.println("What kind of message would you like to send to " + contact.getfirstName() + " " + contact.getLastName() + "?: ");
-                    System.out.println("1. Positive.");
-                    System.out.println("2. Negative.");
-                    System.out.println("3. Neutral.");
-                    input = messageType.nextInt();
-                    Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageContent);
-                    messages.add(message);
-                    System.out.println("Message sent to " + contact.getfirstName() + " " + contact.getLastName() + ": " + messageContent);
+    public void sendMessage(Contact contact) {
+        if (contact == null) {
+                System.out.println("Contact cannot be null");
+            } else if (isOn == true) {
+                    inputMessage();
                 } else {
                     System.out.println("Phone is off. Please turn it on to send a message.");
                 }
             }
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+        }
+    }
+
+    public void inputMessage() {
+        try {
+            Scanner messageInput = new Scanner(System.in);
+                    System.out.println("What kind of message would you like to send to " + contact.getfirstName() + " " + contact.getLastName() + "?: ");
+                    System.out.println("1. Positive.");
+                    System.out.println("2. Negative.");
+                    System.out.println("3. Neutral.");
+                    String input = messageInput.nextLine();
+                    if (isOn && input == "1") {
+                        System.out.println("You sent a positive message to " + contact.getFirstName() + ".");
+                        Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
+                        saveMessage(message);
+                    }
+                    else if (isOn & input == "2") {
+                        System.out.println("You sent a negative message to " + contact.getFirstName() + ".");
+                        Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
+                        saveMessage(message);
+                    }
+                    else if (isOn & input == "3") {
+                        System.out.println("You sent a neutral message to " + contact.getFirstName() + ".");
+                        Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
+                        saveMessage(message);
+                    } else {
+                    throw new IllegalArgumentException("Invalid message.");
+                    System.out.println("Message sent to " + contact.getfirstName() + " " + contact.getLastName() + ": " + messageContent);
+                }
+            } catch (Exception exception) {
+            System.out.println(exception.getMessage());
             return;
         }
+    }
+
+    public void validateMessage(Message message) {
+
+    }
+
+    public void saveMessage(Message message) {
+        messages.add(message);
+        System.out.println("Message has been saved.");
     }
 
     public void displayAllContacts() {
@@ -111,14 +141,11 @@ public class Phone {
     }
 
     public void addContact(Contact contact) {
-        try { 
-            if (isOn == true && !contacts.contains(contact)) {
+        if (isOn == true && !contacts.contains(contact)) {
                 contacts.add(contact);
                 System.out.println("You added " + contact.getfirstName() + "" + contact.getLastName() + " to your contact list.");
         } else if (isOn == true && contacts.contains(contact)) {
             System.out.println("You already have " + contact.getfirstName() + "" + contact.getLastName() + " in your contact list.");
-        }} catch (Exception exception) {
-            System.out.println("An unexpected error occurred: " + exception.getMessage());
         }
     }
 
@@ -139,9 +166,13 @@ public class Phone {
         return owner;
     }
     
-    public String getPhoneNumber() {
-        return phoneNumber;
+    /* 
+    
+    public Contact getPhoneNumber() {
+        return contacts.
     }
+
+    */
     
     public boolean isOn() {
         return isOn;
