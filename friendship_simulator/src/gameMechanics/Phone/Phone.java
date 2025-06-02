@@ -53,18 +53,15 @@ public class Phone {
     }
 
     public void call (Contact contact) {
-        try {
-            if (isOn == true && call.isActive == false && contact != null) {
+        if (isOn == true && call.isActive == false && contact != null) {
+            Call call = new Call(owner, receiver);
             call.isActive = true;
             // Logic to initiate a call to the receiver
             System.out.println("Calling " + contact.getfirstName() + "" + contact.getLastName() + " at " + contact.getPhoneNumber());
             // Add call to history
-            callHistory.add("Call to " + contact.getfirstName() + "" + contact.getLastName() +  " at " + contact.getPhoneNumber());
+            // callHistory.add("Call to " + contact.getfirstName() + "" + contact.getLastName() +  " at " + contact.getPhoneNumber());
         } else {
             System.out.println("Phone is off. Please turn it on to make a call.");
-        }} catch (Exception exception) {
-            System.out.println("An unexpected error occurred: " + exception.getMessage());
-        }
     }
 
     public void addCallToHistory(Call call) {
