@@ -7,15 +7,23 @@ public class Friendship {
 
     /* 
     
-    This class represents a friendship meter that tracks the level of friendship between the main player and their friends. It starts at 0 and goes to 5. 
+    This class represents a friendship meter that tracks the level of friendship between the main player and their friends. It starts at 0 and goes to 4. 
     It can increase or decrease based on interactions between the player and their friends.
+
+    Here is an explanation of the friendship levels:
+    
+    - 0: You don't know the person.
+    - 1: You are acquainted with the person.
+    - 2: You are friends with the person.
+    - 3: You are best friends with the person.
+    - 4: You love the person, in a romantic way.
     
     */
     
     private int currentFriendshipLevel;
     public Player player;
     public Friend friend;
-    public int MAX_FRIENDSHIP_LEVEL = 5; // Maximum friendship level
+    public int MAX_FRIENDSHIP_LEVEL = 4; // Maximum friendship level
     public int MIN_FRIENDSHIP_LEVEL = 0; // Minimum friendship level
     public boolean areFriends;
 
@@ -30,45 +38,45 @@ public class Friendship {
         return currentFriendshipLevel;
     }
 
+    // A method which strengthens the friendship between the player and a friend.
     public void strengthenFriendship(Friendship friendship) {
-        try {
-            if (areFriends = true && currentFriendshipLevel != MAX_FRIENDSHIP_LEVEL) {
+        if (areFriends = true && currentFriendshipLevel != MAX_FRIENDSHIP_LEVEL) {
                 currentFriendshipLevel++;
-                System.out.println("Your friendship with " + friend.getFirstName() + "" + friend.getLastName() + " increased.");
+                System.out.println("Your friendship with " + friend.getFirstName() + "" + friend.getLastName() + " strengthened.");
         } else if (currentFriendshipLevel == MAX_FRIENDSHIP_LEVEL) {
             System.out.println("Friendship level is already at maximum.");
             return; // Do not increase if already at max level
         } else {
             System.out.println("You are not friends with " + friend.getFirstName() + "" + friend.getLastName() + ".");
-        }} catch (Exception exception) {
-            System.out.println("An unexpected error occurred: " + exception.getMessage());
         }
     }
 
+    // A method which weakens the friendship between the player and a friend.
     public void weakenFriendship(Friendship friendship) {
-        try {
-            if (areFriends = true && currentFriendshipLevel != MIN_FRIENDSHIP_LEVEL) {
-                currentFriendshipLevel--;
-                System.out.println("Your friendship with " + friend.getFirstName() + "" + friend.getLastName() + " weakened.");
-            } else {
-                System.out.println("You aren't friends with " + friend.getFirstName() + "" + friend.getLastName() + ".");
-            }} catch (Exception exception) {
-            System.out.println("An unexpected error occurred: " + exception.getMessage());
+        if (areFriends = true && currentFriendshipLevel != MIN_FRIENDSHIP_LEVEL) {
+            currentFriendshipLevel--;
+            System.out.println("Your friendship with " + friend.getFirstName() + "" + friend.getLastName() + " weakened.");
+        } else {
+            System.out.println("You aren't friends with " + friend.getFirstName() + "" + friend.getLastName() + ".");
         }
     }
 
+    // A method which ends the friendship between the player and a friend.
     public void endFriendship(Friend friend) {
-        try {
-            if (areFriends == true) {
+        if (areFriends == true) {
                 areFriends = false;
                 System.out.println("You ended your friendship with " + friend.firstName + "" + friend.getLastName());
             } else {
                 System.out.println("You aren't friends with " + friend.firstName + "" + friend.lastName + ".");
-            }
-        } catch (Exception exception) {
-            System.out.println("An unexpected error occurred: " + exception.getMessage());
+            }        
+    }
+
+    // A method which checks whether the player is friends with someone or not.
+    public void checkIfFriends(Friend friend) {
+        if (areFriends == false) {
+            System.out.println("You are not friends with" + friend.getFirstName() + "" + friend.getLastName());
         }
-        
+        else if (areFriends == true && currentFriendshipLevel )
     }
     
 }

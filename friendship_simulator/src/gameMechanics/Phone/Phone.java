@@ -71,15 +71,13 @@ public class Phone {
 
     // This needs fixing.
     public void sendMessage(Contact contact) {
-        if (contact == null) {
+        if (isOn == false) {
+            System.out.println("You can't send a message, while your phone is turned off.");
+        } else if (contact == null) {
                 System.out.println("Contact cannot be null");
-            } else if (isOn == true) {
+            } else {
                     inputMessage();
-                } else {
-                    System.out.println("Phone is off. Please turn it on to send a message.");
                 }
-            }
-        }
     }
 
     public void inputMessage() {
