@@ -1,4 +1,4 @@
-package gameAssets.Places_Rooms_Items.Items.Bathroom related items;
+package gameAssets.Places_Rooms_Items.Items.Bathroom.General_classes related items;
 
 public class showerGel {
 

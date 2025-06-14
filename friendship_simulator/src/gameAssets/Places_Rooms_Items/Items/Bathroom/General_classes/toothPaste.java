@@ -1,4 +1,4 @@
-package gameAssets.Places_Rooms_Items.Items;
+package gameAssets.Places_Rooms_Items.Items.Bathroom.General_classes;
 
 public class toothPaste {
 

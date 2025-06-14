@@ -1,4 +1,4 @@
-package gameAssets.Places_Rooms_Items.Items;
+package gameAssets.Places_Rooms_Items.Items.Livingroom.General_classes;
 
 public class Chair {
     
