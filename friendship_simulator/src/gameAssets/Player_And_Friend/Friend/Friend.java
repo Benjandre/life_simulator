@@ -2,13 +2,13 @@ package gameAssets.Player_And_Friend.Friend;
 
 import gameAssets.Player_And_Friend.Player.Player;
 import gameAssets.Player_And_Friend.Player.Player.Gender;
-import gameAssets.Player_And_Friend.Player.Player.Smell;
+import gameAssets.Player_And_Friend.Player.Player.bodySmell;
 
 public class Friend extends Player {
 
 
-    public Friend(String firstName, String lastName, Gender gender, int age, int confidence, Smell smell, Bladder bladder) {
-        super(firstName, lastName, gender, age, confidence, smell, bladder);
+    public Friend(String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder) {
+        super (firstName, lastName, gender, age, confidence, oralHygiene, bodySmell, bladder);
     }
 
     public String getFirstName() {
@@ -26,5 +26,18 @@ public class Friend extends Player {
     public int getAge() {
         return age;
     }
+
+    public int getConfidence() {
+        return confidence;
+    }
+
+    public oralHygiene getOralHygiene() {
+        return oralHygiene;
+    }
+
+    public bodySmell getBodySmell() {
+        return bodySmell;
+    }
+
     
 }

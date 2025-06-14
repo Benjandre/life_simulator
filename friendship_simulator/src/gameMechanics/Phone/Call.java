@@ -1,5 +1,7 @@
 package gameMechanics.Phone;
 
+import java.util.Scanner;
+
 import gameAssets.Player_And_Friend.*;
 import gameAssets.Player_And_Friend.Friend.Friend;
 import gameAssets.Player_And_Friend.Player.Player;
@@ -42,8 +44,21 @@ public class Call {
     }
 
     public void saySomething() {
-
+        saySomethingInput();
+        if () {
+            
+        }
     }
+
+    public void saySomethingInput() {
+        Scanner oralInput = new Scanner(System.in);
+        String saySomethingString = oralInput.nextLine();
+    }
+
+    public void validateSaySomethingInput() {
+        
+    }
+
 
     public void endCall(Friend receiver) {
         if (isActive == true) {
