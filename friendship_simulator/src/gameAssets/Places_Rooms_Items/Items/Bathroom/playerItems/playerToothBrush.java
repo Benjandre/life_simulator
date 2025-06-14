@@ -1,11 +1,11 @@
 package gameAssets.Places_Rooms_Items.Items.Bathroom_related_items.Player's_items;
 
-import gameAssets.Places_Rooms_Items.Items.Bathroom_related_items.toothBrush;
+import gameAssets.Places_Rooms_Items.Items.Bathroom.General_classes.toothBrush;
 import gameAssets.Player_And_Friend.Player.Player;
 
-public class playersToothBrush extends toothBrush {
+public class playerToothBrush extends toothBrush {
 
-    public playersToothBrush(Player owner) {
+    public playerToothBrush(Player owner) {
         super(owner);
     }
 
