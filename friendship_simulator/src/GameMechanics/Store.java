@@ -2,6 +2,7 @@ package GameMechanics;
 
 import Models.Item;
 import GameMechanics.Inventory;
+import GameMechanics.People.StoreOwner;
 
 public class Store {
     

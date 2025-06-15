@@ -26,6 +26,13 @@ public class Player {
         FULL
     }
 
+    public enum Hunger {
+        STARVING,
+        HUNGRY,
+        SATISFIED,
+        FULL
+    }
+
     public String firstName;
     public String lastName;
     public Gender gender;
@@ -34,8 +41,9 @@ public class Player {
     public oralHygiene oralHygiene;
     public bodySmell bodySmell;
     public Bladder bladder;
+    public Hunger hunger;
 
-    public Player (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder) {
+    public Player (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder, Hunger hunger) {
         
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,6 +53,7 @@ public class Player {
         this.oralHygiene = oralHygiene; // Default value
         this.bodySmell = bodySmell;
         this.bladder = bladder; // Default value
+        this.hunger = hunger; // Default value
 
     }
 

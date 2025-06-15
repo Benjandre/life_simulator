@@ -1,6 +1,6 @@
 package GameMechanics.Phone;
 
-import Models.Friend;
+import GameMechanics.People.Friend;
 import Models.Player;
 
 public class Message {

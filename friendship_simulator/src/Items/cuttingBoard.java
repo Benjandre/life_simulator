@@ -1,12 +1,14 @@
 package Items;
 
-public class cuttingBoard extends Item {
+import Models.Item;
+
+public class CuttingBoard extends Item {
 
     private String material; // e.g., wood, plastic, bamboo
     private String size; // e.g., small, medium, large
     private boolean isClean; // Indicates if the cutting board is clean
 
-    public cuttingBoard(String material, String size) {
+    public CuttingBoard(String material, String size) {
         super("Cutting Board", "A board for cutting food items.", 500, true);
         this.material = material;
         this.size = size;

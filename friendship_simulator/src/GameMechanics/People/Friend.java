@@ -1,5 +1,7 @@
-package Models;
+package GameMechanics.People;
 
+import Models.Player.Bladder;
+import Models.Player.oralHygiene;
 import gameAssets.Player_And_Friend.Player.Player;
 import gameAssets.Player_And_Friend.Player.Player.Gender;
 import gameAssets.Player_And_Friend.Player.Player.bodySmell;
