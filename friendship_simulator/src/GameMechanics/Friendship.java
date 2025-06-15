@@ -1,9 +1,9 @@
-package gameMechanics.Friendship;
+package GameMechanics;
 
 import gameAssets.Player_And_Friend.Friend.Friend;
 import gameAssets.Player_And_Friend.Player.Player;
 
-public class Friendship {
+public class Friendship extends Relationship {
 
     /* 
     

@@ -1,4 +1,4 @@
-package gameInterface.Options;
+package userInterface;
 
 public class Options {
 

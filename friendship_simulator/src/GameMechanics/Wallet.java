@@ -1,4 +1,4 @@
-package Mechanics;
+package GameMechanics;
 
 public class Wallet {
     

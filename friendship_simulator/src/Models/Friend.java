@@ -1,4 +1,4 @@
-package gameAssets.Player_And_Friend.Friend;
+package Models;
 
 import gameAssets.Player_And_Friend.Player.Player;
 import gameAssets.Player_And_Friend.Player.Player.Gender;

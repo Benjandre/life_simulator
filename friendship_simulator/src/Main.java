@@ -1,4 +1,4 @@
-import gameInterface.mainMenu.mainMenu;
+import userInterface.mainMenu;
 
 public class Main {
 

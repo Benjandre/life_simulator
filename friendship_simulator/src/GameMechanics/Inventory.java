@@ -1,9 +1,13 @@
-package gameMechanics.Inventory;
+package GameMechanics;
+
+import java.util.ArrayList;
+
+import Models.Item;
 
 public class Inventory {
     
     // Inventory class to manage player's items
-    private List<Item> items;
+    private ArrayList<Item> items;
 
     public Inventory() {
         this.items = new ArrayList<>();
@@ -17,7 +21,7 @@ public class Inventory {
         items.remove(item);
     }
 
-    public List<Item> getItems() {
+    public ArrayList<Item> getItems() {
         return items;
     }
 

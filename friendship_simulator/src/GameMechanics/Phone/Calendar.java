@@ -1,4 +1,4 @@
-package gameMechanics.Phone;
+package GameMechanics.Phone;
 
 public class Calendar {
 

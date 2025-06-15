@@ -1,4 +1,4 @@
-package gameAssets.Player_And_Friend.Player;
+package Models;
 
 public class Player {
 

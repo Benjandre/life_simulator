@@ -1,6 +1,13 @@
-package gameInterface.mainMenu;
+package userInterface;
 
 import java.util.Scanner;
+import Models.Player;
+
+    /*
+    MainMenu class represents the main menu of the game.
+    It allows the player to start the game, open options, or exit the game.
+    In the future, this will be a web application with a graphical user interface.
+    */
 
 public class mainMenu {
 

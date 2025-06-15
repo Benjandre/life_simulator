@@ -3,40 +3,26 @@ package Items;
 import gameAssets.Places_Rooms_Items.Items.Item;
 
 public class Bed extends Item {
-        
-    private String type;
-    private String size;
     private String material;
-    private boolean isMade;
+    private String size; // e.g., "Single", "Double", "Queen", "King"
+    private boolean hasBedding;
 
-    public Bed(String type, String size, String material) {
-        this.type = type;
-        this.size = size;
+    public Bed(String material, String size, boolean hasBedding) {
+        super("Bed", "A comfortable bed for resting and sleeping.", 50000, false);
         this.material = material;
-        this.isMade = false; // Bed is initially not made
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getSize() {
-        return size;
+        this.size = size;
+        this.hasBedding = hasBedding;
     }
 
     public String getMaterial() {
         return material;
     }
 
-    public boolean isMade() {
-        return isMade;
+    public String getSize() {
+        return size;
     }
 
-    public void makeBed() {
-        isMade = true; // Set the bed as made
-    }
-
-    public void unmakeBed() {
-        isMade = false; // Set the bed as not made
-    }
+    public boolean hasBedding() {
+        return hasBedding;
+}
 }

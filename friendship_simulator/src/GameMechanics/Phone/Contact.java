@@ -1,6 +1,6 @@
-package gameMechanics.Phone;
+package GameMechanics.Phone;
 
-import gameAssets.Player_And_Friend.Friend.Friend;
+import Models.Friend;
 
 public class Contact {
     

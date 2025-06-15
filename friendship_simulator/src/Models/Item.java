@@ -1,4 +1,4 @@
-package gameAssets.Places_Rooms_Items.Items;
+package Models;
 
 public class Item {
     public enum itemType
@@ -18,7 +18,8 @@ public class Item {
         Toilet,
         Mobilephone
     }
-    
+
+    public Player itemOwner;    
     private itemType itemType;
     private boolean isUsable;
 
