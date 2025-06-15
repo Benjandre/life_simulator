@@ -17,7 +17,7 @@ public class mainMenu {
     public String exitGame = "Exit Game";
 
     public mainMenu(String mainMenuTitle, String startGame, String options, String exitGame) {
-        this. mainMenuTitle = mainMenuTitle;
+        this.mainMenuTitle = mainMenuTitle;
         this.startGame = startGame;
         this.options = options;
         this.exitGame = exitGame;
