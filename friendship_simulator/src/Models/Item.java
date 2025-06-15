@@ -22,18 +22,18 @@ public class Item {
 
     public Player itemOwner;    
     private itemType itemType;
-    private boolean isUsable;
+    private boolean isStationary; // true if the item is stationary, false if it can be moved
 
-    public Item(itemType itemType, boolean isUsable) {
+    public Item(itemType itemType, boolean isStationary) {
         this.itemType = itemType;
-        this.isUsable = isUsable;
+        this.isStationary = isStationary;
     }
 
     public itemType getItemType() {
         return itemType;
     }
 
-    public boolean isUsable() {
-        return isUsable;
+    public boolean isStationary() {
+        return isStationary;
     }
 }
