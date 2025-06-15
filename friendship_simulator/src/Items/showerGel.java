@@ -1,4 +1,4 @@
-package Items related items;
+package Items;
 
 public class showerGel {
 

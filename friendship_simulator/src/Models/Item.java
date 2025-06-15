@@ -16,7 +16,8 @@ public class Item {
         Mirror,
         Shower,
         Toilet,
-        Mobilephone
+        Mobilephone,
+        Food
     }
 
     public Player itemOwner;    

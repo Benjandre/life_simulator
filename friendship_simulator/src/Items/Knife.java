@@ -1,6 +1,6 @@
 package Items;
 
-import gameAssets.Places_Rooms_Items.Items.Item;
+import Models.Item;
 
 public class Knife extends Item {
 
