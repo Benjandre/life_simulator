@@ -61,7 +61,7 @@ public class Room {
         }
     }
 
-    public void cleanRoom() {
+    public static void cleanRoom(Room room) {
         if (roomCleanliness == roomCleanliness.DIRTY) {
             System.out.println("You clean the room.");
             roomCleanliness = roomCleanliness.CLEAN; // Set the room to clean after cleaning
