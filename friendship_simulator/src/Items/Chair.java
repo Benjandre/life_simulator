@@ -50,11 +50,9 @@ public class Chair {
         if (this.room == room) {
             System.out.println("Chair is already in " + room.getRoomName());
         } else {
-            room = room;
+            this.room = room;
             System.out.println("Chair moved to " + room.getRoomName());
         }
-        this.room = room;
-        System.out.println("Chair moved to " + room.getRoomName());
     }
 
 
