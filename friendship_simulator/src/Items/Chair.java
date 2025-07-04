@@ -1,35 +1,64 @@
 package Items;
 
+import Models.Player;
+import Models.Room;
+
 public class Chair {
     
-    private String material;
-    private String color;
-    private boolean isOccupied;
+    public Player player;
+    public Room room;
 
-    public Chair(String material, String color) {
-        this.material = material;
-        this.color = color;
-        this.isOccupied = false;
+    public Chair(Player player) {
     }
 
-    public String getMaterial() {
-        return material;
+    public Player getPlayer() {
+        return player;
     }
 
-    public String getColor() {
-        return color;
+
+    public Room getRoom() {
+        return room;
     }
 
-    public boolean isOccupied() {
-        return isOccupied;
+    public void becomeOccupied(Player player) {
+        if (this.player == null) {
+            this.player = player;
+            System.out.println(player.getFirstName() + " sit down on the chair.");
+        } else {
+            System.out.println("Chair is already occupied.");
+        }
     }
 
-    public void occupy() {
-        this.isOccupied = true;
+    public void becomeVacant(Player player) {
+        if (this.player != null) {
+            this.player = null;
+            System.out.println(this.player.getFirstName() + " stands up from the chair.");
+        } else {
+            System.out.println("Chair is already vacant.");
+        }
     }
 
-    public void vacate() {
-        this.isOccupied = false;
+    public void checkOccupancyStatus() {
+        if (player == null) {
+            System.out.println("Chair is vacant.");            
+        } else {
+            System.out.println("Chair is occupied.");
+        }
     }
+
+    public void moveToRoom(Room room) {
+        if (this.room == room) {
+            System.out.println("Chair is already in " + room.getRoomName());
+        } else {
+            room = room;
+            System.out.println("Chair moved to " + room.getRoomName());
+        }
+        this.room = room;
+        System.out.println("Chair moved to " + room.getRoomName());
+    }
+
+
+
+
     
 }
