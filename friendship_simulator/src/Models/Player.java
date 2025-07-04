@@ -35,6 +35,7 @@ public class Player {
 
     public String firstName;
     public String lastName;
+    public String fullName = firstName + "" + lastName;
     public Gender gender;
     public int age;
     public int confidence;
