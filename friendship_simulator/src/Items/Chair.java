@@ -1,14 +1,16 @@
 package Items;
 
+import Models.Item;
 import Models.Player;
 import Models.Room;
 
-public class Chair {
+public class Chair extends Item {
     
     public Player player;
     public Room room;
 
-    public Chair(Player player, Room room) {
+    public Chair(Player player, Room room, itemType itemType, boolean isStationary) {
+        super(itemType, isStationary);
         this.player = player;
         this.room = room;
     }
