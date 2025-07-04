@@ -51,7 +51,7 @@ public class Chair extends Item {
     }
 
     public void moveToRoom(Room room) {
-        if (this.room == room) {
+        if (this.room == room && isStationary() || this.room == room && !isStationary()) {
             System.out.println("Chair is already in " + room.getRoomName());
         } else {
             this.room = room;
