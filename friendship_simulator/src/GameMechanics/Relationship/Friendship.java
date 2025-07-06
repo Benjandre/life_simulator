@@ -1,5 +1,6 @@
-package GameMechanics;
+package GameMechanics.Relationship;
 
+import Models.Relationship;
 import gameAssets.Player_And_Friend.Friend.Friend;
 import gameAssets.Player_And_Friend.Player.Player;
 

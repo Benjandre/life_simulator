@@ -1,15 +1,15 @@
 package GameMechanics.Phone;
 
-import GameMechanics.People.Friend;
+import GameMechanics.People.Person;
 
 public class Contact {
     
-    private Friend firstName;
-    private Friend lastName;
+    private Person firstName;
+    private Person lastName;
     private String phoneNumber;
 
     // Constructor
-    public Contact(Friend firstName, Friend lastName, String phoneNumber) {
+    public Contact(Person firstName, Person lastName, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;

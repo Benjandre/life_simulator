@@ -1,5 +1,8 @@
 package Models;
 
+import GameMechanics.People.Person;
+import Models.Relationship;
+
 public class Player {
 
     public enum Gender {
@@ -84,5 +87,8 @@ public class Player {
 
     public bodySmell getBodySmell() {
         return bodySmell;
+    }
+
+    public void greet(Person person) {
     }
 }
