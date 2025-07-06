@@ -25,7 +25,7 @@ public class Relationship {
         this.relationshipLevel = relationshipLevel;
     }
 
-    public void createRelationship() {
+    public void createRelationship(Player player, Person person) {
         Relationship relationship = new Relationship (player, person, relationshipType.STRANGER, 0);
     }
 
