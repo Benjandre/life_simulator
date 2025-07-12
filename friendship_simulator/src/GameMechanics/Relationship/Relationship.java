@@ -26,15 +26,15 @@ public class Relationship {
         this.relationshipStrength = Math.min(relationshipStrength, 5);
     }
 
-    private relationshipType getRelationshiType() {
+    public relationshipType getRelationshiType() {
         return relationshipType;
     }
 
-    private int getRelationshipStrength() {
+    public int getRelationshipStrength() {
         return relationshipStrength;
     }
 
-    private void strengthenRelationship() {
+    public void strengthenRelationship() {
         if (relationshipType == null) {
             becomeAcquaintance();
             relationshipStrength = 1;
@@ -74,7 +74,7 @@ public class Relationship {
         }
     }
 
-    private void weakenRelationship() {
+    public void weakenRelationship() {
         if (relationshipType == null) {
             System.out.println("You can't weaken a relationship, which doesn't exist.");
             return;
@@ -113,7 +113,7 @@ public class Relationship {
         }
     }
 
-    private void endRelationship() {
+    public void endRelationship() {
         if (relationshipType == null) {
             System.out.println("You can't end a relationship, which doesn't exist.");
             return;
@@ -131,35 +131,35 @@ public class Relationship {
         }
     }
 
-    private void becomeFriend() {
+    public void becomeFriend() {
         relationshipType = relationshipType.FRIEND;
     }
 
-    private void becomeAcquaintance() {
+    public void becomeAcquaintance() {
         relationshipType = relationshipType.ACQUAINTANCE;
     }
 
-    private void makeRelationshipExcellent() {
+    public void makeRelationshipExcellent() {
         relationshipQuality = relationshipQuality.EXCELLENT;
     }
 
-    private void makeRelationshipGood() {
+    public void makeRelationshipGood() {
         relationshipQuality = relationshipQuality.GOOD;
     }
 
-    private void makeRelationshipNeutral() {
+    public void makeRelationshipNeutral() {
         relationshipQuality = relationshipQuality.NEUTRAL;
     }
 
-    private void makeRelationshipStrained() {
+    public void makeRelationshipStrained() {
         relationshipQuality = relationshipQuality.STRAINED;
     }
 
-    private void makeRelationshipBad() {
+    public void makeRelationshipBad() {
         relationshipQuality = relationshipQuality.BAD;
     }
 
-    private void resetRelationshipStrength() {
+    public void resetRelationshipStrength() {
         relationshipStrength = 0;
     }
 }
