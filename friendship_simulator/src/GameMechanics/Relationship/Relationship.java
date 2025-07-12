@@ -70,6 +70,7 @@ public class Relationship {
         return relationshipStrength > 0;
     }
 
+    // This method needs some work.
     public void strengthenRelationship() {
         if (isRelationshipNull()) {
             becomeAcquaintance();
@@ -110,6 +111,7 @@ public class Relationship {
         }
     }
 
+    // This method needs some work.
     public void weakenRelationship() {
         if (relationshipType == null) {
             System.out.println("You can't weaken a relationship, which doesn't exist.");
