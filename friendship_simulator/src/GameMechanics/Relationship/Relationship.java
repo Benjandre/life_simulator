@@ -9,7 +9,16 @@ public class Relationship {
         RELATIVE,
     }
 
+    private enum relationshipQuality {
+        GOOD,
+        STRAINED,
+        BAD,
+        EXCELLENT,
+        NEUTRAL
+    }
+
     private relationshipType relationshipType;
+    private relationshipQuality relationshipQuality;
     private int relationshipStregth;
     
     public Relationship (relationshipType relationshipType, int relationshipStregth) {
@@ -73,6 +82,7 @@ public class Relationship {
 
         public void weakenRelationship() {
         if (relationshipType == null) {
+            System.out.println("You can't weaken a relationship, which doesn't exist.");
             return;
         }
         switch (relationshipType) {
@@ -109,6 +119,18 @@ public class Relationship {
             default:
                 break;
         }
+    }
+
+    public void endRelationship() {
+        if (relationshipType == null) {
+            System.out.println("You can't end a relationship, which doesn't exist.");
+            return;
+        } else if (relationshipType == relationshipType.LOVER) {
+
+        } else {
+            relationshipType = relationshipType.ACQUAINTANCE;
+        }
+
     }
 
     public void resetRelationshipStrength() {
