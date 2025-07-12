@@ -6,8 +6,7 @@ public class Relationship {
         ACQUAINTANCE,
         FRIEND,
         LOVER,
-        RELATIVE,
-        DISLIKED
+        RELATIVE
     }
 
     private enum relationshipQuality {
@@ -20,59 +19,59 @@ public class Relationship {
 
     private relationshipType relationshipType;
     private relationshipQuality relationshipQuality;
-    private int relationshipStregth;
+    private int relationshipStrength;
     
-    public Relationship (relationshipType relationshipType, int relationshipStregth) {
+    public Relationship (relationshipType relationshipType, int relationshipStrength) {
         this.relationshipType = relationshipType;
         /* 
-        Makes it so that relationshipStregth can't exceed a value of 5.
-        For each type of relationship, the relationshipStregth will be reset to 0.
+        Makes it so that relationshipStrength can't exceed a value of 5.
+        For each type of relationship, the relationshipStrength will be reset to 0.
         */
-        this.relationshipStregth = Math.min(relationshipStregth, 5);
+        this.relationshipStrength = Math.min(relationshipStrength, 5);
     }
 
     public relationshipType getRelationshiType() {
         return relationshipType;
     }
 
-    public int getRelationshipStregth() {
-        return relationshipStregth;
+    public int getRelationshipStrength() {
+        return relationshipStrength;
     }
 
     public void strengthenRelationship() {
         if (relationshipType == null) {
             relationshipType = relationshipType.ACQUAINTANCE;
-            relationshipStregth = 1;
+            relationshipStrength = 1;
             return;
         }
         switch (relationshipType) {
             case ACQUAINTANCE:
-                if (relationshipStregth < 5) {
-                    relationshipStregth++;
+                if (relationshipStrength < 5) {
+                    relationshipStrength++;
                 }
-                if (relationshipStregth == 5) {
+                if (relationshipStrength == 5) {
                     relationshipType = relationshipType.FRIEND;
                     resetRelationshipStrength();
                 }
                 break;
             case FRIEND:
-                if (relationshipStregth < 5) {
-                    relationshipStregth++;
+                if (relationshipStrength < 5) {
+                    relationshipStrength++;
                 }
-                if (relationshipStregth == 5) {
+                if (relationshipStrength == 5) {
                     relationshipType = relationshipType.LOVER;
                     resetRelationshipStrength();
                 }
                 break;
             case LOVER:
-                if (relationshipStregth < 5) {
-                    relationshipStregth++;
+                if (relationshipStrength < 5) {
+                    relationshipStrength++;
                 }
                 // You can add more logic here if needed for LOVER
                 break;
             case RELATIVE:
-                if (relationshipStregth < 5) {
-                    relationshipStregth++;
+                if (relationshipStrength < 5) {
+                    relationshipStrength++;
                 }
                 // RELATIVE type may not change further
                 break;
@@ -88,32 +87,32 @@ public class Relationship {
         }
         switch (relationshipType) {
             case ACQUAINTANCE:
-                if (relationshipStregth > 0) {
-                    relationshipStregth--;
+                if (relationshipStrength > 0) {
+                    relationshipStrength--;
                 }
                 // If desired, you could handle dropping below 0 here
                 break;
             case FRIEND:
-                if (relationshipStregth > 0) {
-                    relationshipStregth--;
+                if (relationshipStrength > 0) {
+                    relationshipStrength--;
                 }
-                if (relationshipStregth == 0) {
+                if (relationshipStrength == 0) {
                     relationshipType = relationshipType.ACQUAINTANCE;
-                    relationshipStregth = 5;
+                    relationshipStrength = 5;
                 }
                 break;
             case LOVER:
-                if (relationshipStregth > 0) {
-                    relationshipStregth--;
+                if (relationshipStrength > 0) {
+                    relationshipStrength--;
                 }
-                if (relationshipStregth == 0) {
+                if (relationshipStrength == 0) {
                     relationshipType = relationshipType.FRIEND;
-                    relationshipStregth = 5;
+                    relationshipStrength = 5;
                 }
                 break;
             case RELATIVE:
-                if (relationshipStregth > 0) {
-                    relationshipStregth--;
+                if (relationshipStrength > 0) {
+                    relationshipStrength--;
                 }
                 // RELATIVE type may not change further
                 break;
@@ -127,12 +126,16 @@ public class Relationship {
             System.out.println("You can't end a relationship, which doesn't exist.");
             return;
         } 
-        // If the romantic relationship is "OK" or "better, the people involved become friends.
-        else if (relationshipType == relationshipType.LOVER && relationshipQuality == relationshipQuality.GOOD || relationshipQuality == relationshipQuality.NEUTRAL || relationshipQuality == relationshipQuality.EXCELLENT) {
+        // If the romantic relationship is "OK" or better, the people involved become friends.
+        else if (relationshipType == relationshipType.LOVER && (relationshipQuality == relationshipQuality.GOOD || relationshipQuality == relationshipQuality.NEUTRAL || relationshipQuality == relationshipQuality.EXCELLENT)) {
             relationshipType = relationshipType.FRIEND;
         // If the romantic relationship is "strained" or worse, the people involved start to dislike each other.
-        } else if (relationshipType == relationshipType.LOVER && relationshipQuality == relationshipQuality.STRAINED || relationshipQuality == relationshipQuality.BAD) {
-            relationshipType = relationshipType.DISLIKED;
+        } else if (relationshipType == relationshipType.LOVER || relationshipType == relationshipType.FRIEND && relationshipQuality == relationshipQuality.STRAINED || relationshipQuality == relationshipQuality.BAD) {
+            relationshipType = relationshipType.ACQUAINTANCE;
+            if (relationshipQuality != relationshipQuality.STRAINED) {
+                relationshipQuality = relationshipQuality.BAD;
+            }
+            relationshipQuality = relationshipQuality.BAD;
         } else {
             relationshipType = relationshipType.ACQUAINTANCE;
         }
@@ -140,6 +143,6 @@ public class Relationship {
     }
 
     public void resetRelationshipStrength() {
-        relationshipStregth = 0;
+        relationshipStrength = 0;
     }
 }
