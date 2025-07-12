@@ -54,24 +54,24 @@ public class Relationship {
         return relationshipType == relationshipType.RELATIVE;
     }
 
-    private boolean isStrengthFive() {
+    private boolean isRelationshipStrengthFive() {
         return relationshipStrength == 5;
     }
 
-    private boolean isStrengthZero() {
+    private boolean isRelationshipStrengthZero() {
         return relationshipStrength == 0;
     }
 
-    private boolean strengthIsLessThanFive() {
+    private boolean relationshipStrengthIsLessThanFive() {
         return relationshipStrength < 5;
     }
 
-    private boolean strengthIsMoreThanZero() {
+    private boolean relationshipStrengthIsMoreThanZero() {
         return relationshipStrength > 0;
     }
 
     // This method needs some work.
-    public void strengthenRelationship() {
+    public void growRelationship() {
         if (isRelationshipNull()) {
             becomeAcquaintance();
             relationshipStrength++;
@@ -79,30 +79,30 @@ public class Relationship {
         }
         switch (relationshipType) {
             case ACQUAINTANCE:
-                if (canIncreaseStrength()) {
+                if (isRelationshipStrengthZero()) {
                     relationshipStrength++;
                 }
-                if (isStrengthMax()) {
+                if (isRelationshipStrengthFive()) {
                     becomeFriend();
                     resetRelationshipStrength();
                 }
                 break;
             case FRIEND:
-                if (relationshipStrength < 5) {
+                if (relationshipStrengthIsLessThanFive()) {
                     relationshipStrength++;
                 }
-                if (relationshipStrength == 5) {
+                if (isRelationshipStrengthFive()) {
                     becomeLover();
                     resetRelationshipStrength();
                 }
                 break;
             case LOVER:
-                if (relationshipStrength < 5) {
+                if (relationshipStrengthIsLessThanFive()) {
                     relationshipStrength++;
                 }
                 break;
             case RELATIVE:
-                if (relationshipStrength < 5) {
+                if (relationshipStrengthIsLessThanFive()) {
                     relationshipStrength++;
                 }
                 break;
@@ -112,37 +112,37 @@ public class Relationship {
     }
 
     // This method needs some work.
-    public void weakenRelationship() {
+    public void worsenRelationship() {
         if (relationshipType == null) {
-            System.out.println("You can't weaken a relationship, which doesn't exist.");
+            System.out.println("You can't worsen a relationship, which doesn't exist.");
             return;
         }
         switch (relationshipType) {
             case ACQUAINTANCE:
-                if (relationshipStrength > 0) {
+                if (relationshipStrengthIsMoreThanZero()) {
                     relationshipStrength--;
                 }
                 break;
             case FRIEND:
-                if (relationshipStrength > 0) {
+                if (relationshipStrengthIsMoreThanZero()) {
                     relationshipStrength--;
                 }
-                if (relationshipStrength == 0) {
+                if (isRelationshipStrengthZero()) {
                     becomeAcquaintance();
                     relationshipStrength = 5;
                 }
                 break;
             case LOVER:
-                if (relationshipStrength > 0) {
+                if (relationshipStrengthIsMoreThanZero()) {
                     relationshipStrength--;
                 }
-                if (relationshipStrength == 0) {
+                if (isRelationshipStrengthZero()) {
                     becomeFriend();
                     relationshipStrength = 5;
                 }
                 break;
             case RELATIVE:
-                if (relationshipStrength > 0) {
+                if (relationshipStrengthIsMoreThanZero()) {
                     relationshipStrength--;
                 }
                 break;
