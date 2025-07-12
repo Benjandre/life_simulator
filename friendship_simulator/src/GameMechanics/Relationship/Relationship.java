@@ -54,6 +54,22 @@ public class Relationship {
         return relationshipType == relationshipType.RELATIVE;
     }
 
+    private boolean isStrengthFive() {
+        return relationshipStrength == 5;
+    }
+
+    private boolean isStrengthZero() {
+        return relationshipStrength == 0;
+    }
+
+    private boolean strengthIsLessThanFive() {
+        return relationshipStrength < 5;
+    }
+
+    private boolean strengthIsMoreThanZero() {
+        return relationshipStrength > 0;
+    }
+
     public void strengthenRelationship() {
         if (isRelationshipNull()) {
             becomeAcquaintance();
@@ -62,10 +78,10 @@ public class Relationship {
         }
         switch (relationshipType) {
             case ACQUAINTANCE:
-                if (relationshipStrength < 5) {
+                if (canIncreaseStrength()) {
                     relationshipStrength++;
                 }
-                if (relationshipStrength == 5) {
+                if (isStrengthMax()) {
                     becomeFriend();
                     resetRelationshipStrength();
                 }
