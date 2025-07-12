@@ -2,14 +2,13 @@ package GameMechanics.Phone;
 
 import java.util.Scanner;
 
-import gameAssets.Player_And_Friend.*;
-import gameAssets.Player_And_Friend.Friend.Friend;
-import gameAssets.Player_And_Friend.Player.Player;
+import Models.Player;
+import GameMechanics.People.Person;
 
 public class Call {
 
     public Player caller;
-    public Friend receiver;
+    public Person receiver;
     public int amountOfWordsSpoken;
     public boolean isActive;
 
@@ -24,14 +23,14 @@ public class Call {
     public wordsToSay wordToSay;
 
     // Constructor
-    public Call(Player caller, Friend receiver) {
+    public Call(Player caller, Person receiver) {
         this.caller = caller;
         this.receiver = receiver;
         this.amountOfWordsSpoken = 0;
         this.isActive = true;
     }
 
-    public void call(Friend receiver) {
+    public void call(Person receiver) {
         this.receiver = receiver;
         if (receiver != null) {
             isActive = true;
