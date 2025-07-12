@@ -1,6 +1,6 @@
 package Items;
 
-import gameAssets.Player_And_Friend.Player.Player;
+import GameMechanics.People.mainPlayer;
 
 public class toothBrush {
 
@@ -12,5 +12,9 @@ public class toothBrush {
 
     public Character getOwner() {
         return owner;
+    }
+
+    public void brushTeeth() {
+        owner.
     }
 }

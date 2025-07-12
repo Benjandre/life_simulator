@@ -1,17 +1,19 @@
 package GameMechanics.People;
 
-import Models.Character.*;
+import Models.Relationship;
 
-public class Person extends Character {
+public class otherCharacter {
 
     private String firstName;
     private String lastName;
     private String phoneNumber;
+    private Relationship relationship = null;
 
-    public Person(String firstName, String lastName, String phoneNumber) {
+    public otherCharacter(String firstName, String lastName, String phoneNumber, Relationship relationship) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
+        this.relationship = relationship;
     }
 
     public String getFirstName() {

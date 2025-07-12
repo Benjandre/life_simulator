@@ -3,24 +3,24 @@ package GameMechanics.Turn;
 public class Turn {
 
     private int turnNumner;
-    private boolean isTurnOver;
+    private boolean isTurnActive;
 
-    public Turn (int turnNumner, boolean isTurnOver) {
+    public Turn (int turnNumner, boolean isTurnActive) {
         this.turnNumner = turnNumner;
-        this.isTurnOver = isTurnOver;
+        this.isTurnActive = isTurnActive;
     }
 
     public int getTurnNumber() {
         return turnNumner;
     }
 
-    public boolean isTurnOver() {
-        return isTurnOver;
+    public boolean isTurnActive() {
+        return isTurnActive;
     }
 
     public void startTurn() {
-        if (isTurnOver == true) {
-            isTurnOver = false;
+        if (isTurnActive == false) {
+            isTurnActive = true;
             System.out.println("A new turn has started.");
         } else {
             System.out.println("You can't start a new turn, while another one hasn't ended, yet.");
@@ -28,8 +28,8 @@ public class Turn {
     }
 
     public void endTurn() {
-        if (isTurnOver == false) {
-            isTurnOver = true;
+        if (isTurnActive == true) {
+            isTurnActive = false;
             turnNumner++;
             System.out.println("The turn has ended.");
         } else {

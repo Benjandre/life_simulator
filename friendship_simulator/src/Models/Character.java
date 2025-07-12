@@ -1,6 +1,6 @@
 package Models;
 
-import GameMechanics.People.Person;
+import GameMechanics.People.otherCharacter;
 import Models.Relationship;
 
 public class Character {
@@ -89,6 +89,6 @@ public class Character {
         return bodySmell;
     }
 
-    public void greet(Person person) {
+    public void greet(otherCharacter person) {
     }
 }

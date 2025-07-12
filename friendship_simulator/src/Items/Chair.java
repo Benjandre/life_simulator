@@ -1,22 +1,22 @@
 package Items;
 
 import Models.Item;
-import Models.Character;
+import GameMechanics.People.mainPlayer;
 import Models.Room;
 
 public class Chair extends Item {
     
-    public Character player;
+    public mainPlayer mainPlayer;
     public Room room;
 
-    public Chair(Character player, Room room, itemType itemType, boolean isStationary) {
+    public Chair(mainPlayer mainPlayer, Room room, itemType itemType, boolean isStationary) {
         super(itemType, isStationary);
-        this.player = player;
+        this.mainPlayer = mainPlayer;
         this.room = room;
     }
 
-    public Character getPlayer() {
-        return player;
+    public mainPlayer getPlayer() {
+        return mainPlayer;
     }
 
 
@@ -24,26 +24,26 @@ public class Chair extends Item {
         return room;
     }
 
-    public void becomeOccupied(Character player) {
-        if (this.player == null) {
-            this.player = player;
-            System.out.println(player.getFirstName() + " sit down on the chair.");
+    public void becomeOccupied(mainPlayer mainPlayer) {
+        if (this.mainPlayer == null) {
+            this.mainPlayer = mainPlayer;
+            System.out.println(mainPlayer.getFirstName() + " sit down on the chair.");
         } else {
             System.out.println("Chair is already occupied.");
         }
     }
 
-    public void becomeVacant(Character player) {
-        if (this.player != null) {
-            this.player = null;
-            System.out.println(this.player.getFirstName() + " stands up from the chair.");
+    public void becomeVacant(mainPlayer mainPlayer) {
+        if (this.mainPlayer != null) {
+            this.mainPlayer = null;
+            System.out.println(this.mainPlayer.getFirstName() + " stands up from the chair.");
         } else {
             System.out.println("Chair is already vacant.");
         }
     }
 
     public void checkOccupancyStatus() {
-        if (player == null) {
+        if (mainPlayer == null) {
             System.out.println("Chair is vacant.");            
         } else {
             System.out.println("Chair is occupied.");

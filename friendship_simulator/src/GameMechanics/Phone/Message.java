@@ -1,12 +1,12 @@
 package GameMechanics.Phone;
 
-import GameMechanics.People.Person;
+import GameMechanics.People.otherCharacter;
 import Models.Character;
 
 public class Message {
 
     public Character player;
-    public Person friend;
+    public otherCharacter friend;
 
     /*
     This is the type of message the player can send to their friends. Each type of message results in different responses from the friends. 
@@ -22,7 +22,7 @@ public class Message {
     public long timestamp;
 
     // Constructor
-    public Message(Character player, Person friend, messageType messageType) {
+    public Message(Character player, otherCharacter friend, messageType messageType) {
         this.player = player;
         this.friend = friend;
         this.messageType = messageType;
@@ -32,7 +32,7 @@ public class Message {
         return player;
     }
 
-    public Person getFriend() {
+    public otherCharacter getFriend() {
         return friend;
     }
 
