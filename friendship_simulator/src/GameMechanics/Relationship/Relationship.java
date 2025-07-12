@@ -71,6 +71,46 @@ public class Relationship {
         }
     }
 
+        public void weakenRelationship() {
+        if (relationshipType == null) {
+            return;
+        }
+        switch (relationshipType) {
+            case ACQUAINTANCE:
+                if (relationshipStregth > 0) {
+                    relationshipStregth--;
+                }
+                // If desired, you could handle dropping below 0 here
+                break;
+            case FRIEND:
+                if (relationshipStregth > 0) {
+                    relationshipStregth--;
+                }
+                if (relationshipStregth == 0) {
+                    relationshipType = relationshipType.ACQUAINTANCE;
+                    relationshipStregth = 5;
+                }
+                break;
+            case LOVER:
+                if (relationshipStregth > 0) {
+                    relationshipStregth--;
+                }
+                if (relationshipStregth == 0) {
+                    relationshipType = relationshipType.FRIEND;
+                    relationshipStregth = 5;
+                }
+                break;
+            case RELATIVE:
+                if (relationshipStregth > 0) {
+                    relationshipStregth--;
+                }
+                // RELATIVE type may not change further
+                break;
+            default:
+                break;
+        }
+    }
+
     public void resetRelationshipStrength() {
         relationshipStregth = 0;
     }
