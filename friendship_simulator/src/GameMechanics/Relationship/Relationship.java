@@ -130,7 +130,7 @@ public class Relationship {
         else if (relationshipType == relationshipType.LOVER && (relationshipQuality == relationshipQuality.GOOD || relationshipQuality == relationshipQuality.NEUTRAL || relationshipQuality == relationshipQuality.EXCELLENT)) {
             relationshipType = relationshipType.FRIEND;
         // If the romantic relationship is "strained" or worse, the people involved start to dislike each other.
-        } else if (relationshipType == relationshipType.LOVER || relationshipType == relationshipType.FRIEND && relationshipQuality == relationshipQuality.STRAINED || relationshipQuality == relationshipQuality.BAD) {
+        } else if ((relationshipType == relationshipType.LOVER || relationshipType == relationshipType.FRIEND) && (relationshipQuality == relationshipQuality.STRAINED || relationshipQuality == relationshipQuality.BAD)) {
             relationshipType = relationshipType.ACQUAINTANCE;
             if (relationshipQuality != relationshipQuality.STRAINED) {
                 relationshipQuality = relationshipQuality.BAD;
