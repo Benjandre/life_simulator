@@ -40,7 +40,7 @@ public class Relationship {
 
     public void strengthenRelationship() {
         if (relationshipType == null) {
-            relationshipType = relationshipType.ACQUAINTANCE;
+            becomeAcquaintance();
             relationshipStrength = 1;
             return;
         }
@@ -97,7 +97,7 @@ public class Relationship {
                     relationshipStrength--;
                 }
                 if (relationshipStrength == 0) {
-                    relationshipType = relationshipType.ACQUAINTANCE;
+                    becomeAcquaintance();
                     relationshipStrength = 5;
                 }
                 break;
@@ -106,7 +106,7 @@ public class Relationship {
                     relationshipStrength--;
                 }
                 if (relationshipStrength == 0) {
-                    relationshipType = relationshipType.FRIEND;
+                    becomeFriend();
                     relationshipStrength = 5;
                 }
                 break;
@@ -128,18 +128,46 @@ public class Relationship {
         } 
         // If the romantic relationship is "OK" or better, the people involved become friends.
         else if (relationshipType == relationshipType.LOVER && (relationshipQuality == relationshipQuality.GOOD || relationshipQuality == relationshipQuality.NEUTRAL || relationshipQuality == relationshipQuality.EXCELLENT)) {
-            relationshipType = relationshipType.FRIEND;
+            becomeFriend();
         // If the romantic relationship is "strained" or worse, the people involved start to dislike each other.
         } else if ((relationshipType == relationshipType.LOVER || relationshipType == relationshipType.FRIEND) && (relationshipQuality == relationshipQuality.STRAINED || relationshipQuality == relationshipQuality.BAD)) {
-            relationshipType = relationshipType.ACQUAINTANCE;
+            becomeAcquaintance();
             if (relationshipQuality != relationshipQuality.STRAINED) {
-                relationshipQuality = relationshipQuality.BAD;
+                makeRelationshipBad();
             }
-            relationshipQuality = relationshipQuality.BAD;
+            makeRelationshipBad();
         } else {
-            relationshipType = relationshipType.ACQUAINTANCE;
+            becomeAcquaintance();
         }
 
+    }
+
+    public void becomeFriend() {
+        relationshipType = relationshipType.FRIEND;
+    }
+
+    public void becomeAcquaintance() {
+        relationshipType = relationshipType.ACQUAINTANCE;
+    }
+
+    public void makeRelationshipExcellent() {
+        relationshipQuality = relationshipQuality.EXCELLENT;
+    }
+
+    public void makeRelationshipGood() {
+        relationshipQuality = relationshipQuality.GOOD;
+    }
+
+    public void makeRelationshipNeutral() {
+        relationshipQuality = relationshipQuality.NEUTRAL;
+    }
+
+    public void makeRelationshipStrained() {
+        relationshipQuality = relationshipQuality.STRAINED;
+    }
+
+    public void makeRelationshipBad() {
+        relationshipQuality = relationshipQuality.BAD;
     }
 
     public void resetRelationshipStrength() {
