@@ -3,7 +3,7 @@ package Models;
 import GameMechanics.People.Person;
 import Models.Relationship;
 
-public class Player {
+public class Character {
 
     public enum Gender {
         FEMALE,
@@ -47,7 +47,7 @@ public class Player {
     public Bladder bladder;
     public Hunger hunger;
 
-    public Player (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder, Hunger hunger) {
+    public Character (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder, Hunger hunger) {
         
         this.firstName = firstName;
         this.lastName = lastName;

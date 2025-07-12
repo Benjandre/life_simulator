@@ -1,15 +1,17 @@
 package GameMechanics.People;
 
-import Models.Player.*;
-import gameAssets.Player_And_Friend.Player.Player;
-import gameAssets.Player_And_Friend.Player.Player.Gender;
-import gameAssets.Player_And_Friend.Player.Player.bodySmell;
+import Models.Character.*;
 
-public class Person extends Player {
+public class Person extends Character {
 
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
 
-    public Person(String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder) {
-        super (firstName, lastName, gender, age, confidence, oralHygiene, bodySmell, bladder);
+    public Person(String firstName, String lastName, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getFirstName() {
@@ -20,24 +22,8 @@ public class Person extends Player {
         return lastName;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-    
-    public int getAge() {
-        return age;
-    }
-
-    public int getConfidence() {
-        return confidence;
-    }
-
-    public oralHygiene getOralHygiene() {
-        return oralHygiene;
-    }
-
-    public bodySmell getBodySmell() {
-        return bodySmell;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     

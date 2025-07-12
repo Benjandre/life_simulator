@@ -1,21 +1,21 @@
 package Items;
 
 import Models.Item;
-import Models.Player;
+import Models.Character;
 import Models.Room;
 
 public class Chair extends Item {
     
-    public Player player;
+    public Character player;
     public Room room;
 
-    public Chair(Player player, Room room, itemType itemType, boolean isStationary) {
+    public Chair(Character player, Room room, itemType itemType, boolean isStationary) {
         super(itemType, isStationary);
         this.player = player;
         this.room = room;
     }
 
-    public Player getPlayer() {
+    public Character getPlayer() {
         return player;
     }
 
@@ -24,7 +24,7 @@ public class Chair extends Item {
         return room;
     }
 
-    public void becomeOccupied(Player player) {
+    public void becomeOccupied(Character player) {
         if (this.player == null) {
             this.player = player;
             System.out.println(player.getFirstName() + " sit down on the chair.");
@@ -33,7 +33,7 @@ public class Chair extends Item {
         }
     }
 
-    public void becomeVacant(Player player) {
+    public void becomeVacant(Character player) {
         if (this.player != null) {
             this.player = null;
             System.out.println(this.player.getFirstName() + " stands up from the chair.");

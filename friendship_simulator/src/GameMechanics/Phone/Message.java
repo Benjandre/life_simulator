@@ -1,11 +1,11 @@
 package GameMechanics.Phone;
 
 import GameMechanics.People.Person;
-import Models.Player;
+import Models.Character;
 
 public class Message {
 
-    public Player player;
+    public Character player;
     public Person friend;
 
     /*
@@ -22,13 +22,13 @@ public class Message {
     public long timestamp;
 
     // Constructor
-    public Message(Player player, Person friend, messageType messageType) {
+    public Message(Character player, Person friend, messageType messageType) {
         this.player = player;
         this.friend = friend;
         this.messageType = messageType;
     }
 
-    public Player getPlayer() {
+    public Character getPlayer() {
         return player;
     }
 

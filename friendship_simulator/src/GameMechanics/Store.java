@@ -8,7 +8,9 @@ public class Store {
     
     // Store class to manage items available for purchase
     private String storeName;
-    private Inventory inventory;
+    private Inventory storeInventory;
+    private Inventory playerInventory;
+    private StoreOwner owner;
 
     public Store(String storeName) {
         this.storeName = storeName;

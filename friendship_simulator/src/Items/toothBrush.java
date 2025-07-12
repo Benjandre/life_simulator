@@ -4,13 +4,13 @@ import gameAssets.Player_And_Friend.Player.Player;
 
 public class toothBrush {
 
-    public Player owner;
+    public Character owner;
 
-    public toothBrush(Player owner) {
+    public toothBrush(Character owner) {
         this.owner = owner;
     }
 
-    public Player getOwner() {
+    public Character getOwner() {
         return owner;
     }
 }

@@ -1,7 +1,7 @@
 package userInterface;
 
 import java.util.Scanner;
-import Models.Player;
+import Models.Character;
 
     /*
     MainMenu class represents the main menu of the game.

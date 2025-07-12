@@ -20,7 +20,7 @@ public class Item {
         Food
     }
 
-    public Player itemOwner;  
+    public Character itemOwner;  
     private itemType itemType;
     private boolean isStationary; // true if the item is stationary, false if it can be moved
 

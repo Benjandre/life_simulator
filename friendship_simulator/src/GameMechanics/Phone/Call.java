@@ -59,7 +59,7 @@ public class Call {
     }
 
 
-    public void endCall(Friend receiver) {
+    public void endCall(Person receiver) {
         if (isActive == true) {
             isActive = false;
             System.out.println("Call ended with " + receiver.getFirstName() + "" + receiver.getLastName() + ".");
@@ -70,7 +70,7 @@ public class Call {
         
     }
 
-    public void addCallToHistory(Friend receiver) {
+    public void addCallToHistory(Person receiver) {
         if (isActive == false && receiver != null) {
             addCallToHistory(receiver);
         }
