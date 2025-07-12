@@ -34,10 +34,30 @@ public class Relationship {
         return relationshipStrength;
     }
 
+    public boolean isRelationshipNull() {
+        return relationshipType == null;
+    }
+
+    public boolean isAcquaintance() {
+        return relationshipType == relationshipType.ACQUAINTANCE;
+    }
+
+    public boolean isFriend() {
+        return relationshipType == relationshipType.FRIEND;
+    }
+
+    public boolean isLover() {
+        return relationshipType == relationshipType.LOVER;
+    }
+
+    public boolean isRelative() {
+        return relationshipType == relationshipType.RELATIVE;
+    }
+
     public void strengthenRelationship() {
-        if (relationshipType == null) {
+        if (isRelationshipNull()) {
             becomeAcquaintance();
-            relationshipStrength = 1;
+            relationshipStrength++;
             return;
         }
         switch (relationshipType) {
@@ -46,7 +66,7 @@ public class Relationship {
                     relationshipStrength++;
                 }
                 if (relationshipStrength == 5) {
-                    relationshipType = relationshipType.FRIEND;
+                    becomeFriend();
                     resetRelationshipStrength();
                 }
                 break;
@@ -55,7 +75,7 @@ public class Relationship {
                     relationshipStrength++;
                 }
                 if (relationshipStrength == 5) {
-                    relationshipType = relationshipType.LOVER;
+                    becomeLover();
                     resetRelationshipStrength();
                 }
                 break;
@@ -137,6 +157,10 @@ public class Relationship {
 
     public void becomeAcquaintance() {
         relationshipType = relationshipType.ACQUAINTANCE;
+    }
+
+    public void becomeLover() {
+        relationshipType = relationshipType.LOVER;
     }
 
     public void makeRelationshipExcellent() {
