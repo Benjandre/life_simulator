@@ -7,14 +7,15 @@ public class Relationship {
         FRIEND,
         LOVER,
         RELATIVE,
+        DISLIKED
     }
 
     private enum relationshipQuality {
-        GOOD,
-        STRAINED,
-        BAD,
         EXCELLENT,
-        NEUTRAL
+        GOOD,
+        NEUTRAL,
+        STRAINED,
+        BAD
     }
 
     private relationshipType relationshipType;
@@ -125,8 +126,13 @@ public class Relationship {
         if (relationshipType == null) {
             System.out.println("You can't end a relationship, which doesn't exist.");
             return;
-        } else if (relationshipType == relationshipType.LOVER) {
-
+        } 
+        // If the romantic relationship is "OK" or "better, the people involved become friends.
+        else if (relationshipType == relationshipType.LOVER && relationshipQuality == relationshipQuality.GOOD || relationshipQuality == relationshipQuality.NEUTRAL || relationshipQuality == relationshipQuality.EXCELLENT) {
+            relationshipType = relationshipType.FRIEND;
+        // If the romantic relationship is "strained" or worse, the people involved start to dislike each other.
+        } else if (relationshipType == relationshipType.LOVER && relationshipQuality == relationshipQuality.STRAINED || relationshipQuality == relationshipQuality.BAD) {
+            relationshipType = relationshipType.DISLIKED;
         } else {
             relationshipType = relationshipType.ACQUAINTANCE;
         }
