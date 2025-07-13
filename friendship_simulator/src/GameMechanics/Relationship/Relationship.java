@@ -26,7 +26,7 @@ public class Relationship {
         this.relationshipStrength = Math.min(relationshipStrength, 5);
     }
 
-    public relationshipType getRelationshiType() {
+    public relationshipType getRelationshipType() {
         return relationshipType;
     }
 
