@@ -1,6 +1,6 @@
 package Java.Itemsnd.Items;
 
-public class showerGel {
+public class ShowerGel {
 
     private String scent; // e.g., "Lavender", "Citrus"
     private String brand; // e.g., "Dove", "Nivea"

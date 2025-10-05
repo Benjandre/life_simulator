@@ -2,7 +2,7 @@ package Rooms;
 
 import Models.Room;
 
-public class StorageRoom extends Room { 
+public class StorageRoom extends Room {
 
     public StorageRoom() {
         // Constructor logic for StorageRoom can be added here

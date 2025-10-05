@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 // Update the import path to the correct location of Player class
 import Models.Character;
-import GameMechanics.People.mainPlayer;
-import GameMechanics.People.otherCharacter;
+import GameMechanics.People.MainPlayer;
+import GameMechanics.People.OtherCharacter;
 
 public class Call {
 
-    public mainPlayer caller;
-    public otherCharacter receiver;
+    public MainPlayer caller;
+    public OtherCharacter receiver;
     public int amountOfWordsSpoken;
     public boolean isActive;
 
@@ -25,14 +25,13 @@ public class Call {
     public wordsToSay wordToSay;
 
     // Constructor
-    public Call(mainPlayer caller, otherCharacter receiver) {
+    public Call(MainPlayer caller, OtherCharacter receiver) {
         this.caller = caller;
         this.receiver = receiver;
         this.amountOfWordsSpoken = 0;
         this.isActive = true;
     }
 
-    public void call(otherCharacter receiver) {
         this.receiver = receiver;
         if (receiver != null) {
             isActive = true;
@@ -61,7 +60,6 @@ public class Call {
     }
 
 
-    public void endCall(otherCharacter receiver) {
         if (isActive == true) {
             isActive = false;
             System.out.println("Call ended with " + receiver.getFirstName() + "" + receiver.getLastName() + ".");
@@ -72,7 +70,6 @@ public class Call {
         
     }
 
-    public void addCallToHistory(otherCharacter receiver) {
         if (isActive == false && receiver != null) {
             addCallToHistory(receiver);
         }

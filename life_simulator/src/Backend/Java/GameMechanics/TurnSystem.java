@@ -1,6 +1,6 @@
 package GameMechanics;
 
-public class turnSystem {
+public class TurnSystem {
     
     /* 
     This class represents the turn system in the game. Each action the player takes is considered a turn. A action can be anything from sending

@@ -1,6 +1,6 @@
 package Java.Items;
 
-public class toothPaste {
+public class ToothPaste {
 
     private String brand;
     private String flavor; // e.g., "Mint", "Cinnamon"

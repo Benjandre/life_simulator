@@ -1,6 +1,6 @@
 package GameMechanics.Phone;
 
-public class callHistory {
+public class CallHistory {
     private String caller;
     private String receiver;
     private String timestamp;

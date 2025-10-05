@@ -7,18 +7,18 @@ import GameMechanics.Phone.Contact;
 import GameMechanics.Phone.Message;
 import GameMechanics.Phone.Message.messageType;
 import GameMechanics.Phone.Call;
-import GameMechanics.People.mainPlayer;
+import GameMechanics.People.MainPlayer;
 
 public class Phone {
 
-    private mainPlayer owner;
+    private MainPlayer owner;
     private Call call;
     private ArrayList<Contact> contacts;
     private ArrayList<Message> messages;
     private ArrayList<Call> callHistory;
     private boolean isOn;
 
-    public Phone(mainPlayer owner) {
+    public Phone(MainPlayer owner) {
         this.owner = owner;
         this.contacts = new ArrayList<>();
         this.messages = new ArrayList<>();
@@ -157,7 +157,7 @@ public class Phone {
         }
     }
     
-    public mainPlayer getOwner() {
+    public MainPlayer getOwner() {
         return owner;
     }
     
