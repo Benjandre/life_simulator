@@ -3,6 +3,7 @@ package GameMechanics.Relationship;
 public class Relationship {
 
     private enum relationshipType {
+        STRANGER,
         ACQUAINTANCE,
         FRIEND,
         LOVER,

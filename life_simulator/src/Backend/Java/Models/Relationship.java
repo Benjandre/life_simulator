@@ -15,18 +15,18 @@ public class Relationship {
 
     public relationshipType relationshipType;
     private int relationshipLevel;
-    private Character player;
-    private otherCharacter person;
+    private Character mainPlayer;
+    private otherCharacter otherCharacter;
 
-    public Relationship (Character player, otherCharacter person, relationshipType relationshipType, int relationshipLevel) {
-        this.player = player;
-        this.person = person;
+    public Relationship (Character mainPlayer, otherCharacter otherCharacter, relationshipType relationshipType, int relationshipLevel) {
+        this.mainPlayer = mainPlayer;
+        this.otherCharacter = otherCharacter;
         this.relationshipType = relationshipType;
         this.relationshipLevel = relationshipLevel;
     }
 
-    public void createRelationship(Character player, otherCharacter person) {
-        Relationship relationship = new Relationship (player, person, relationshipType.STRANGER, 0);
+    public void createRelationship(Character mainPlayer, otherCharacter otherCharacter) {
+        Relationship relationship = new Relationship (mainPlayer, otherCharacter, relationshipType.STRANGER, 0);
     }
 
     public void strengthenRelationship() {

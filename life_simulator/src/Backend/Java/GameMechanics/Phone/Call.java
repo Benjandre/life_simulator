@@ -2,13 +2,15 @@ package GameMechanics.Phone;
 
 import java.util.Scanner;
 
-import Models.Player;
-import GameMechanics.People.Person;
+// Update the import path to the correct location of Player class
+import Models.Character;
+import GameMechanics.People.mainPlayer;
+import GameMechanics.People.otherCharacter;
 
 public class Call {
 
-    public Player caller;
-    public Person receiver;
+    public mainPlayer caller;
+    public otherCharacter receiver;
     public int amountOfWordsSpoken;
     public boolean isActive;
 
@@ -23,14 +25,14 @@ public class Call {
     public wordsToSay wordToSay;
 
     // Constructor
-    public Call(Player caller, Person receiver) {
+    public Call(mainPlayer caller, otherCharacter receiver) {
         this.caller = caller;
         this.receiver = receiver;
         this.amountOfWordsSpoken = 0;
         this.isActive = true;
     }
 
-    public void call(Person receiver) {
+    public void call(otherCharacter receiver) {
         this.receiver = receiver;
         if (receiver != null) {
             isActive = true;
@@ -59,7 +61,7 @@ public class Call {
     }
 
 
-    public void endCall(Person receiver) {
+    public void endCall(otherCharacter receiver) {
         if (isActive == true) {
             isActive = false;
             System.out.println("Call ended with " + receiver.getFirstName() + "" + receiver.getLastName() + ".");
@@ -70,7 +72,7 @@ public class Call {
         
     }
 
-    public void addCallToHistory(Person receiver) {
+    public void addCallToHistory(otherCharacter receiver) {
         if (isActive == false && receiver != null) {
             addCallToHistory(receiver);
         }

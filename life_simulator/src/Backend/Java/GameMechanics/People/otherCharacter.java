@@ -1,19 +1,14 @@
 package GameMechanics.People;
 
+import GameMechanics.People.mainPlayer;
 import Models.Relationship;
+import Models.Relationship.relationshipType;
+import Models.Character;
 
-public class otherCharacter {
+public class otherCharacter extends Character {
 
-    private String firstName;
-    private String lastName;
-    private String phoneNumber;
-    private Relationship relationship = null;
-
-    public otherCharacter(String firstName, String lastName, String phoneNumber, Relationship relationship) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.relationship = relationship;
+    public otherCharacter(String firstName, String lastName, Gender gender, int age, int confidence, Models.Character.oralHygiene oralHygiene, Models.Character.bodySmell bodySmell, Bladder bladder, Hunger hunger) {
+        super(firstName, lastName, gender, age, confidence, oralHygiene, bodySmell, bladder, hunger);
     }
 
     public String getFirstName() {

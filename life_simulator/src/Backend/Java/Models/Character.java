@@ -89,6 +89,6 @@ public class Character {
         return bodySmell;
     }
 
-    public void greet(otherCharacter person) {
+    public void greet(otherCharacter otherCharacter) {
     }
 }

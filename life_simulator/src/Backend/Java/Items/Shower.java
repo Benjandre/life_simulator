@@ -1,6 +1,6 @@
 package Java.Itemsnd.Items;
 
-import gameAssets.Player_And_Friend.Player.Player;
+import GameMechanics.People.mainPlayer;
 
 public class Shower {
     

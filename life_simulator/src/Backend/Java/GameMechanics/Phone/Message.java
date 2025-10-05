@@ -5,8 +5,8 @@ import GameMechanics.People.otherCharacter;
 
 public class Message {
 
-    public Character player;
-    public otherCharacter friend;
+    public Character mainPlayer;
+    public otherCharacter otherCharacter;
 
     /*
     This is the type of message the player can send to their friends. Each type of message results in different responses from the friends. 
@@ -22,18 +22,18 @@ public class Message {
     public long timestamp;
 
     // Constructor
-    public Message(Character player, otherCharacter friend, messageType messageType) {
-        this.player = player;
-        this.friend = friend;
+    public Message(Character mainPlayer, otherCharacter otherCharacter, messageType messageType) {
+        this.mainPlayer = mainPlayer;
+        this.otherCharacter = otherCharacter;
         this.messageType = messageType;
     }
 
-    public Character getPlayer() {
-        return player;
+    public Character getMainPlayer() {
+        return mainPlayer;
     }
 
-    public otherCharacter getFriend() {
-        return friend;
+    public otherCharacter getOtherCharacter() {
+        return otherCharacter;
     }
 
     public messageType getMessageType() {
