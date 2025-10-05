@@ -4,6 +4,7 @@ import Models.Character;
 import Items.Food;
 import Items.Bed;
 import Items.Chair;
+import Items.ToothBrush;
 
 public class MainPlayer extends Character {
 
@@ -27,6 +28,8 @@ public class MainPlayer extends Character {
     }
 
     // Consider making this so, that it always fully rests you.
+    // Also, make it so, that you need to be "exausted" or "tired", for sleeping.
+    // Consider adding a "wake up" method to this.
     public void sleep(Bed bed) {
         if (bed != null) {
             System.out.println("You sleep in the bed.");
@@ -44,7 +47,14 @@ public class MainPlayer extends Character {
 
     public void sit(Chair chair) {
         if (chair != null) {
-                        
+            System.out.println("You sat down.");
+            if (condition) {
+                
+            }
         }
+    }
+
+    public void brushTeeth() {
+        
     }
 }
