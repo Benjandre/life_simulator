@@ -1,5 +1,7 @@
 package Java.Places;
 
+import Models.Place;
+
 public class Home extends Place {
 
     private String address;

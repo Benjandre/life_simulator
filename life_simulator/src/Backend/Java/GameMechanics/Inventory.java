@@ -2,7 +2,7 @@ package GameMechanics;
 
 import java.util.ArrayList;
 
-import Backend.Models.Item;
+import Models.Item;
 
 public class Inventory {
     

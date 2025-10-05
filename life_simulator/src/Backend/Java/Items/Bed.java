@@ -1,8 +1,8 @@
-package Java.Itemsnd.Items;
+package Java.Items;
 
-import Backend.Models.Item;
-import Backend.Models.Room;
-import GameMechanics.People.mainPlayer;
+import Java.Models.Item;
+import Java.Models.Room;
+import Java.GameMechanics.People.mainPlayer;
 
 public class Bed extends Item {
     private String material;

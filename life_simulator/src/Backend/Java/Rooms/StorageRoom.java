@@ -1,4 +1,6 @@
-package Java.Rooms;
+package Rooms;
+
+import Models.Room;
 
 public class StorageRoom extends Room { 
 

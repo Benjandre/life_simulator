@@ -1,6 +1,6 @@
-package Backend.Models;
+package Models;
 
-import Backend.Models.Relationship;
+import Models.Relationship;
 import GameMechanics.People.otherCharacter;
 
 public class Character {

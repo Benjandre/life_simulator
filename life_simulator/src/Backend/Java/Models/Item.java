@@ -1,4 +1,4 @@
-package Backend.Models;
+package Models;
 
 public class Item {
     public enum itemType

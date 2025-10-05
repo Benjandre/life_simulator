@@ -1,4 +1,6 @@
-package Java.Places;
+package Places;
+
+import Models.Place;
 
 public class Cafe extends Place {
 

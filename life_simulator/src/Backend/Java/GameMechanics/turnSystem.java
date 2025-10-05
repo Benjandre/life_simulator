@@ -1,6 +1,6 @@
 package GameMechanics;
 
-public class Turn {
+public class turnSystem {
     
     /* 
     This class represents the turn system in the game. Each action the player takes is considered a turn. A action can be anything from sending
@@ -10,7 +10,7 @@ public class Turn {
     private int turnNumber;
     private boolean isPlayerTurn;
 
-    public Turn(int turnNumber, boolean isPlayerTurn) {
+    public turnSystem(int turnNumber, boolean isPlayerTurn) {
         this.turnNumber = turnNumber;
         this.isPlayerTurn = isPlayerTurn;
     }

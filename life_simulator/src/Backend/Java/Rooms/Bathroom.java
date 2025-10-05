@@ -1,6 +1,6 @@
-package Java.Rooms;
+package Rooms;
 
-import Backend.Models.Room;
+import Models.Room;
 import gameAssets.Places_Rooms_Items.Items.Mirror;
 import gameAssets.Places_Rooms_Items.Items.Shower;
 import gameAssets.Places_Rooms_Items.Items.Toilet;

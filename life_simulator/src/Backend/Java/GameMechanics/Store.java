@@ -1,20 +1,21 @@
 package GameMechanics;
 
-import Backend.Models.Item;
+import Models.Item;
 import GameMechanics.Inventory;
 import GameMechanics.People.StoreOwner;
 
 public class Store {
     
     // Store class to manage items available for purchase
+    private String storeOwner;
     private String storeName;
     private Inventory storeInventory;
     private Inventory playerInventory;
-    private StoreOwner owner;
 
-    public Store(String storeName) {
+    public Store(StoreOwner storeOwner, Inventory storeInventory, Inventory playerInventory) {
+        this.storeOwner = storeOwner;
         this.storeName = storeName;
-        this.inventory = new Inventory();
+        this.storeInventory = storeInventory;
     }
 
     public String getStoreName() {

@@ -1,10 +1,15 @@
 package GameMechanics.People;
 
-public class StoreOwner extends Person {
+import Models.Character;
 
-    private String storeName;
-    private String storeType;
+public class StoreOwner extends Character {
 
-    public StoreOwner(String firstName, String
+    public StoreOwner(String firstName, String lastName, Gender gender, int age, int confidence,
+            Models.Character.oralHygiene oralHygiene, Models.Character.bodySmell bodySmell, Bladder bladder,
+            Hunger hunger) {
+        super(firstName, lastName, gender, age, confidence, oralHygiene, bodySmell, bladder, hunger);
+        //TODO Auto-generated constructor stub
+    }
+
     
 }

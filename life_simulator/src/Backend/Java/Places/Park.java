@@ -1,5 +1,7 @@
 package Java.Places;
 
+import Models.Place;
+
 public class Park extends Place {
 
     private String parkName;
