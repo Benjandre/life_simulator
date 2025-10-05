@@ -1,4 +1,4 @@
-package GameMechanics.Turn;
+package GameMechanics.TimeManagement;
 
 public class Turn {
 
