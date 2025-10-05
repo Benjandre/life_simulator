@@ -36,18 +36,26 @@ public class Character {
         FULL
     }
 
-    public String firstName;
-    public String lastName;
-    public String fullName = firstName + "" + lastName;
-    public Gender gender;
-    public int age;
-    public int confidence;
-    public oralHygiene oralHygiene;
-    public bodySmell bodySmell;
-    public Bladder bladder;
-    public Hunger hunger;
+    public enum EnergyLevel {
+        EXAUSTED,
+        TIRED,
+        MODERATE,
+        ENERGETIC
+    }
 
-    public Character (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder, Hunger hunger) {
+    private String firstName;
+    private String lastName;
+    private String fullName = firstName + "" + lastName;
+    private Gender gender;
+    private int age;
+    private int confidence;
+    private oralHygiene oralHygiene;
+    private bodySmell bodySmell;
+    private Bladder bladder;
+    private Hunger hunger;
+    private EnergyLevel energyLevel;
+
+    public Character (String firstName, String lastName, Gender gender, int age, int confidence, oralHygiene oralHygiene, bodySmell bodySmell, Bladder bladder, Hunger hunger, EnergyLevel energyLevel) {
         
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,6 +66,7 @@ public class Character {
         this.bodySmell = bodySmell;
         this.bladder = bladder; // Default value
         this.hunger = hunger; // Default value
+        this.energyLevel = energyLevel;
 
     }
 
@@ -89,6 +98,19 @@ public class Character {
         return bodySmell;
     }
 
-    public void greet(otherCharacter otherCharacter) {
+    public Hunger getHunger() {
+        return hunger;
+    }
+
+    public void setHunger(Hunger hunger) {
+        this.hunger = hunger;
+    }
+
+    public EnergyLevel getEnergyLevel() {
+        return energyLevel;
+    }
+
+    public void setEnergyLevel(EnergyLevel energyLevel) {
+        this.energyLevel = energyLevel;
     }
 }

@@ -6,8 +6,8 @@ import GameMechanics.People.mainPlayer;
 
 public class Chair extends Item {
     
-    public mainPlayer mainPlayer;
-    public Room room;
+    private mainPlayer mainPlayer;
+    private Room room;
 
     public Chair(mainPlayer mainPlayer, Room room, itemType itemType, boolean isStationary) {
         super(itemType, isStationary);

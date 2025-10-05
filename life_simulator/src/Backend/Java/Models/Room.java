@@ -10,10 +10,10 @@ public class Room {
         DUSTY
     }
 
-    public String roomName;
-    public int roomLength;
-    public int roomHeight;
-    public roomCleanliness roomCleanliness;
+    private String roomName;
+    private int roomLength;
+    private int roomHeight;
+    private roomCleanliness roomCleanliness;
 
     public Room(String roomName, int roomLength, int roomHeight, roomCleanliness roomCleanliness) {
         this.roomName = roomName;

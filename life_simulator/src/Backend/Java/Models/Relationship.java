@@ -13,7 +13,7 @@ public class Relationship {
         ROMANTIC_PARTNER
     }
 
-    public relationshipType relationshipType;
+    private relationshipType relationshipType;
     private int relationshipLevel;
     private Character mainPlayer;
     private otherCharacter otherCharacter;
