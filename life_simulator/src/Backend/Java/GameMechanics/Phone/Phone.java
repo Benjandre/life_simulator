@@ -156,6 +156,26 @@ public class Phone {
         }
     }
 
+    public void openCallOption() {
+        try {
+            if (isOn == true && !contacts.isEmpty()) {
+                System.out.println("These are all your contacts:");
+                for (Contact : contacts) {
+                    System.out.println(Contact.getFirstName() + "" + Contact.getLastName());
+                }
+                System.out.println("Who would you like to call?: ");
+                Scanner scanner = new Scanner(System.in);
+                String callOption = scanner.nextLine();
+            }
+        } catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
+        }
+    }
+
+    public void openMessageOption() {
+
+    }
+
     public void selectOption() {
         try {
             if (isOn == true) {
@@ -166,10 +186,10 @@ public class Phone {
                 String selectOption = scanner.nextLine();
                 switch (selectOption) {
                     case "1":
-                        System.out.println("Who would you like to call?: ");
-                        this.selectOption = scanner.nextLine();
+                        openCallOption();
                         break;
                     case "2":
+                        openMessageOption();
                         break;
                     default:
                         System.out.println("That isn't a valid option. Please try something else.");

@@ -94,6 +94,10 @@ public class Character {
         return oralHygiene;
     }
 
+    public void setOralHygiene(oralHygiene oralHygiene) {
+        this.oralHygiene = oralHygiene;
+    }
+
     public bodySmell getBodySmell() {
         return bodySmell;
     }

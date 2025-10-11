@@ -1,31 +1,17 @@
 package GameMechanics.Phone;
 
-import GameMechanics.People.otherCharacter;
+import GameMechanics.People.OtherCharacter;
 
 public class Contact {
-    
-    private otherCharacter firstName;
-    private otherCharacter lastName;
+    private OtherCharacter OtherCharacter;
     private String phoneNumber;
 
-    // Constructor
-    public Contact(otherCharacter firstName, otherCharacter lastName, String phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Contact (OtherCharacter OtherCharacter, String phoneNumber) {
+        this.OtherCharacter = OtherCharacter;
         this.phoneNumber = phoneNumber;
-    }
-
-    // Getters
-    public String getfirstName() {
-        return firstName.toString();
-    }
-
-    public String getLastName() {
-        return lastName.toString();
     }
 
     public String getPhoneNumber() {
         return phoneNumber;
     }
-    
 }

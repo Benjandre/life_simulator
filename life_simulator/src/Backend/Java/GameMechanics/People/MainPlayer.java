@@ -5,7 +5,8 @@ import Items.Food;
 import Items.Bed;
 import Items.Chair;
 import Items.ToothBrush;
-import Items.Phone;
+import Items.ToothPaste;
+import GameMechanics.Phone.Phone;
 
 public class MainPlayer extends Character {
 
@@ -55,15 +56,20 @@ public class MainPlayer extends Character {
         }
     }
 
-    public void brushTeeth(ToothBrush ToothBrush) {
-        if (ToothBrush != null) {
+    public void brushTeeth(ToothBrush ToothBrush, ToothPaste ToothPaste) {
+        if (ToothBrush != null && ToothPaste != null) {
             System.out.println("You brushed your teeth.");
             if (getOralHygiene() == oralHygiene.BAD) {
                 setOralHygiene(oralHygiene.OK);
             } else if (getOralHygiene() == oralHygiene.OK) {
                 setOralHygiene(oralHygiene.GOOD);
+            }
+        } else if (ToothBrush == null && ToothPaste != null) {
+            System.out.println("You need a toothbrush in order to brush your teeth.");
+        } else if (ToothBrush != null && ToothPaste == null) {
+            System.out.println("You need toothpaste in order to brush your teeth.");
         } else {
-            System.out.println("You need a toothbrush to brush your teeth.");
+            System.out.println("You need a toothbrush and some toothpaste in order to brush your teeth.");
         }
     }
 
