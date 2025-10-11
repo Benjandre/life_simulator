@@ -5,6 +5,7 @@ import Items.Food;
 import Items.Bed;
 import Items.Chair;
 import Items.ToothBrush;
+import Items.Phone;
 
 public class MainPlayer extends Character {
 
@@ -63,6 +64,20 @@ public class MainPlayer extends Character {
                 setOralHygiene(oralHygiene.GOOD);
         } else {
             System.out.println("You need a toothbrush to brush your teeth.");
+        }
+    }
+
+    public void usePhone(Phone phone) {
+        if (phone != null) {
+            phone.turnOn();
+            if (phone.isOn() == true) {
+                System.out.println("The phone is turning on.");
+                System.out.println("You can now use your phone.");
+            } else {
+                System.out.println("You need to turn your phone on, before you can use it.");
+            }
+        } else {
+            System.out.println("You need a phone to use it.");
         }
     }
 }

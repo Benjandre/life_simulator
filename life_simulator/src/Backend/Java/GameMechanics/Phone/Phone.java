@@ -25,35 +25,32 @@ public class Phone {
         this.callHistory = new ArrayList<>();
         this.isOn = true; // Phone is on by default
     }
+    // New, concise method names
 
-    public void turnOnPhone() {
+    public boolean isOn() {
+        return isOn;
+    }
+
+    public void turnOn() {
         if (isOn == false) {
-
             isOn = true;
             System.out.println("You turned your phone on.");
-
         } else {
-
             System.out.println("Phone is already on.");
-
         }
     }
 
-    public void turnOffPhone() {
+    public void turnOff() {
         if (isOn == true) {
-
             isOn = false;
             System.out.println("You turned your phone off.");
-
         } else {
-
             System.out.println("You can't turn your phone off, since it is already off.");
-
         }
     }
 
     public void call (Contact contact) {
-        if (isOn == true && call.isActive == false && contact != null) {
+    if (isOn == true && call.isActive == false && contact != null) {
             Call call = new Call(owner, receiver);
             call.isActive = true;
             // Logic to initiate a call to the receiver
@@ -156,6 +153,32 @@ public class Phone {
             System.out.println("An unexpected error occurred: " + exception.getMessage());
         }
     }
+
+    public void selectOption() {
+        try {
+            if (isOn == true) {
+                System.out.println("What would you like to do?:");
+                System.out.println("1. Call someone.");
+                System.out.println("2. Send someone a message.");
+                Scanner scanner = new Scanner(System.in);
+                String selectOption = scanner.nextLine();
+                switch (selectOption) {
+                    case "1":
+                        System.out.println("Who would you like to call?: ");
+                        this.selectOption = scanner.nextLine();
+                        break;
+                    case "2":
+                        break;
+                    default:
+                        System.out.println("That isn't a valid option. Please try something else.");
+                }
+            } else {
+                System.out.println("You can't select an option, while your phone is turned off.");
+            }
+        } catch (Exception exception) {
+            System.out.println("An unexpected error occurred: " + exception.getMessage());
+        }
+    }
     
     public MainPlayer getOwner() {
         return owner;
@@ -168,9 +191,5 @@ public class Phone {
     }
 
     */
-    
-    public boolean isOn() {
-        return isOn;
-    }
     
 }
