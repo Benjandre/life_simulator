@@ -9,8 +9,15 @@ public class ToothBrush {
         REGULAR
     }
 
+    public enum ToothBrushDurability {
+        NEW,
+        USED,
+        WORN_OUT
+    }
+
     private Character owner;
     private ToothBrushType ToothBrushType;
+    private ToothBrushDurability ToothBrushDurability;
 
     public ToothBrush(Character owner) {
         this.owner = owner;
@@ -22,5 +29,9 @@ public class ToothBrush {
 
     public ToothBrushType getToothBrushType() {
         return ToothBrushType;
+    }
+
+    public ToothBrushDurability getToothBrushDurability() {
+        return ToothBrushDurability;
     }
 }
