@@ -79,23 +79,24 @@ public class Phone {
 
     public void inputMessage() {
         try {
+            if(isOn == true) {
             Scanner messageInput = new Scanner(System.in);
                     System.out.println("What kind of message would you like to send to " + contact.getfirstName() + " " + contact.getLastName() + "?: ");
                     System.out.println("1. Positive.");
                     System.out.println("2. Negative.");
                     System.out.println("3. Neutral.");
                     String input = messageInput.nextLine();
-                    if (isOn && input == "1") {
+                    if (input == "1") {
                         System.out.println("You sent a positive message to " + contact.getFirstName() + ".");
                         Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
                         saveMessage(message);
                     }
-                    else if (isOn & input == "2") {
+                    else if (input == "2") {
                         System.out.println("You sent a negative message to " + contact.getFirstName() + ".");
                         Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
                         saveMessage(message);
                     }
-                    else if (isOn & input == "3") {
+                    else if (input == "3") {
                         System.out.println("You sent a neutral message to " + contact.getFirstName() + ".");
                         Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
                         saveMessage(message);
@@ -107,6 +108,7 @@ public class Phone {
             System.out.println(exception.getMessage());
             return;
         }
+    }
     }
 
     public void validateMessage(Message message) {
