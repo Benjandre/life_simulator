@@ -54,7 +54,15 @@ public class MainPlayer extends Character {
         }
     }
 
-    public void brushTeeth() {
-        
+    public void brushTeeth(ToothBrush ToothBrush) {
+        if (ToothBrush != null) {
+            System.out.println("You brushed your teeth.");
+            if (getOralHygiene() == oralHygiene.BAD) {
+                setOralHygiene(oralHygiene.OK);
+            } else if (getOralHygiene() == oralHygiene.OK) {
+                setOralHygiene(oralHygiene.GOOD);
+        } else {
+            System.out.println("You need a toothbrush to brush your teeth.");
+        }
     }
 }
