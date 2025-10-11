@@ -118,6 +118,7 @@ public class Phone {
         System.out.println("Message has been saved.");
     }
 
+    // Add functionality so that the player can call a contact with a specific number (e. g. contact number x).
     public void displayAllContacts() {
         try {
             if (!contacts.isEmpty()) {
