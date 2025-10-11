@@ -80,35 +80,33 @@ public class Phone {
     public void inputMessage() {
         try {
             if(isOn == true) {
-            Scanner messageInput = new Scanner(System.in);
-                    System.out.println("What kind of message would you like to send to " + contact.getfirstName() + " " + contact.getLastName() + "?: ");
-                    System.out.println("1. Positive.");
-                    System.out.println("2. Negative.");
-                    System.out.println("3. Neutral.");
-                    String input = messageInput.nextLine();
-                    if (input == "1") {
-                        System.out.println("You sent a positive message to " + contact.getFirstName() + ".");
-                        Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
-                        saveMessage(message);
-                    }
-                    else if (input == "2") {
-                        System.out.println("You sent a negative message to " + contact.getFirstName() + ".");
-                        Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
-                        saveMessage(message);
-                    }
-                    else if (input == "3") {
-                        System.out.println("You sent a neutral message to " + contact.getFirstName() + ".");
-                        Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
-                        saveMessage(message);
-                    } else {
+                Scanner messageInput = new Scanner(System.in);
+                System.out.println("What kind of message would you like to send to " + contact.getfirstName() + " " + contact.getLastName() + "?: ");
+                System.out.println("1. Positive.");
+                System.out.println("2. Negative.");
+                System.out.println("3. Neutral.");
+                String input = messageInput.nextLine();
+                if (input == "1") {
+                    System.out.println("You sent a positive message to " + contact.getFirstName() + ".");
+                    Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
+                    saveMessage(message);
+                } else if (input == "2") {
+                    System.out.println("You sent a negative message to " + contact.getFirstName() + ".");
+                    Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
+                    saveMessage(message);
+                } else if (input == "3") {
+                    System.out.println("You sent a neutral message to " + contact.getFirstName() + ".");
+                    Message message = new Message(owner.getFirstName(), contact.getfirstName(), messageType);
+                    saveMessage(message);
+                } else {
                     throw new IllegalArgumentException("Invalid message.");
                     System.out.println("Message sent to " + contact.getfirstName() + " " + contact.getLastName() + ": " + messageContent);
                 }
-            } catch (Exception exception) {
+            }
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
             return;
         }
-    }
     }
 
     public void validateMessage(Message message) {
@@ -124,7 +122,7 @@ public class Phone {
         try {
             if (!contacts.isEmpty()) {
                 for (Contact contact : contacts) {
-                System.out.println(contact);
+                    System.out.println(contact);
                 }
             } else {
                 System.out.println("You have no contacts in your contact list.");
@@ -160,12 +158,9 @@ public class Phone {
         try {
             if (isOn == true && !contacts.isEmpty()) {
                 System.out.println("These are all your contacts:");
-                for (Contact contact : contacts) {
-                    System.out.println(contact.getFirstName() + "" + contact.getLastName());
-                }
-                System.out.println("Who would you like to call?: ");
+                displayAllContacts();
                 Scanner scanner = new Scanner(System.in);
-                String callOption = scanner.nextLine();
+                System.out.println("Who would you like to call?: ");
             }
         } catch (Exception exception) {
             System.out.println("An unexpected error occurred: " + exception.getMessage());
