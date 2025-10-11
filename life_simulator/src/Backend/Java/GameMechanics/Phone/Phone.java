@@ -160,8 +160,8 @@ public class Phone {
         try {
             if (isOn == true && !contacts.isEmpty()) {
                 System.out.println("These are all your contacts:");
-                for (Contact : contacts) {
-                    System.out.println(Contact.getFirstName() + "" + Contact.getLastName());
+                for (Contact contact : contacts) {
+                    System.out.println(contact.getFirstName() + "" + contact.getLastName());
                 }
                 System.out.println("Who would you like to call?: ");
                 Scanner scanner = new Scanner(System.in);
