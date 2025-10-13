@@ -78,6 +78,10 @@ public class Character {
         return lastName;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
     public Gender getGender() {
         return gender;
     }

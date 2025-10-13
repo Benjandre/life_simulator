@@ -1,19 +1,36 @@
-package Java.Items;
+package Items;
+
+import Models.Item;
 
 public class Food extends Item {
 
-    private String foodType; // e.g., "Fruit", "Vegetable", "Meat"
-    private String expirationDate; // e.g., "2023-12-31"
-    private boolean isCooked; // true if the food is cooked, false if raw
+    private enum foodType {
+        FRUIT,
+        VEGETABLE,
+        MEAT,
+        DAIRY,
+        GRAIN,
+        SNACK,
+        BEVERAGE
+    }
+    public foodType foodType;
+    private String expirationDate;
+    public enum foodTreatement {
+        RAW,
+        COOKED,
+        FRIED,
+        BAKED
+    }
+    public foodTreatement foodTreatement;
 
-    public Food(String name, String description, int weight, boolean isUsable, String foodType, String expirationDate, boolean isCooked) {
-        super(name, description, weight, isUsable);
+    public Food(Character itemOwner, itemType itemType, boolean isStationary, foodType foodType, String expirationDate, foodTreatement foodTreatement) {
+        super(itemOwner, itemType, isStationary);
         this.foodType = foodType;
         this.expirationDate = expirationDate;
-        this.isCooked = isCooked;
+        this.foodTreatement = foodTreatement;
     }
 
-    public String getFoodType() {
+    public foodType getFoodType() {
         return foodType;
     }
 
@@ -21,8 +38,8 @@ public class Food extends Item {
         return expirationDate;
     }
 
-    public boolean isCooked() {
-        return isCooked;
+    public foodTreatement getFoodTreatement() {
+        return foodTreatement;
     }
     
 }

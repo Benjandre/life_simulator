@@ -1,11 +1,12 @@
 package Java.Places;
 
 import Models.Place;
+import Models.Room;
 
 public class Home extends Place {
 
     private String address;
-    private int numberOfRooms;
+    private Room room;
     private boolean hasGarden;
 
     public Home(String name, String description, String locationType, String address, int numberOfRooms, boolean hasGarden) {
