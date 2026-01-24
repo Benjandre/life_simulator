@@ -1,12 +1,12 @@
-package GameMechanics.People;
+package Backend.Java.GameMechanics.People;
 
-import Models.Character;
-import Items.Food;
-import Items.Bed;
-import Items.Chair;
-import Items.ToothBrush;
-import Items.ToothPaste;
-import GameMechanics.Phone.Phone;
+import Backend.Java.Models.Character;
+import Backend.Java.Items.Food;
+import Backend.Java.Items.Bed;
+import Backend.Java.Items.Chair;
+import Backend.Java.Items.ToothBrush;
+import Backend.Java.Items.ToothPaste;
+import Backend.Java.GameMechanics.Phone.Phone;
 
 public class MainPlayer extends Character {
 

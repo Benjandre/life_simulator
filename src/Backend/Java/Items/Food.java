@@ -1,6 +1,6 @@
-package Items;
+package Backend.Java.Items;
 
-import Models.Item;
+import Backend.Java.Models.Item;
 
 public class Food extends Item {
 

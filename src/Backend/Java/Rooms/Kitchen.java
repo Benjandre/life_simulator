@@ -1,6 +1,6 @@
-package Rooms;
+package Backend.Java.Rooms;
 
-import Models.Room;
+import Backend.Java.Models.Room;
 
 public class Kitchen extends Room {
 

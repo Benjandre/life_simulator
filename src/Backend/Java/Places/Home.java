@@ -1,7 +1,7 @@
-package Java.Places;
+package Backend.Java.Places;
 
-import Models.Place;
-import Models.Room;
+import Backend.Java.Models.Place;
+import Backend.Java.Models.Room;
 
 public class Home extends Place {
 

@@ -1,6 +1,6 @@
-package Java.Itemsnd.Items;
+package Backend.Java.Items;
 
-import GameMechanics.People.mainPlayer;
+import Backend.Java.GameMechanics.People.MainPlayer;
 
 public class Shower {
     

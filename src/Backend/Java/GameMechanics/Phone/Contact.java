@@ -1,6 +1,6 @@
-package GameMechanics.Phone;
+package Backend.Java.GameMechanics.Phone;
 
-import GameMechanics.People.OtherCharacter;
+import Backend.Java.GameMechanics.People.OtherCharacter;
 
 public class Contact {
     private OtherCharacter OtherCharacter;

@@ -1,6 +1,6 @@
-package Java.Places;
+package Backend.Java.Places;
 
-import Models.Place;
+import Backend.Java.Models.Place;
 
 public class Park extends Place {
 

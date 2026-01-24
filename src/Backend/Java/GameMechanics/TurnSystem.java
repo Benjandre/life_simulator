@@ -1,4 +1,4 @@
-package GameMechanics;
+package Backend.Java.GameMechanics;
 
 public class TurnSystem {
     

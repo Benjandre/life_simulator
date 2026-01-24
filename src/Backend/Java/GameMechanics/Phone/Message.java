@@ -1,7 +1,7 @@
-package GameMechanics.Phone;
+package Backend.Java.GameMechanics.Phone;
 
-import Backend.Models.Character;
-import GameMechanics.People.otherCharacter;
+import Backend.Java.Models.Character;
+import Backend.Java.GameMechanics.People.OtherCharacter;
 
 public class Message {
 

@@ -1,9 +1,9 @@
-package GameMechanics;
+package Backend.Java.GameMechanics;
 
-import Models.Item;
-import Rooms.StorageRoom;
-import GameMechanics.Inventory;
-import GameMechanics.People.storeOwner;
+import Backend.Java.Models.Item;
+import Backend.Java.Rooms.StorageRoom;
+import Backend.Java.GameMechanics.Inventory;
+import Backend.Java.GameMechanics.People.StoreOwner;
 
 public class Store {
     

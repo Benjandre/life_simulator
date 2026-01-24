@@ -1,8 +1,8 @@
-package GameMechanics;
+package Backend.Java.GameMechanics;
 
 import java.util.ArrayList;
 
-import Models.Item;
+import Backend.Java.Models.Item;
 
 public class Inventory {
     

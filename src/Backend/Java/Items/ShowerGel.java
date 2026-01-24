@@ -1,4 +1,4 @@
-package Java.Itemsnd.Items;
+package Backend.Java.Items;
 
 public class ShowerGel {
 

@@ -1,9 +1,9 @@
-package Rooms;
+package Backend.Java.Rooms;
 
-import Models.Room;
-import gameAssets.Places_Rooms_Items.Items.Mirror;
-import gameAssets.Places_Rooms_Items.Items.Shower;
-import gameAssets.Places_Rooms_Items.Items.Toilet;
+import Backend.Java.Models.Room;
+import Backend.Java.Items.Mirror;
+import Backend.Java.Items.Shower;
+import Backend.Java.Items.Toilet;
 
 public class Bathroom extends Room {
     Shower shower;

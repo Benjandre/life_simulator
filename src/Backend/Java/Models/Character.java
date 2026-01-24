@@ -1,7 +1,7 @@
-package Models;
+package Backend.Java.Models;
 
-import Models.Relationship;
-import GameMechanics.People.otherCharacter;
+import Backend.Java.Models.Relationship;
+import Backend.Java.GameMechanics.People.OtherCharacter;
 
 public class Character {
 

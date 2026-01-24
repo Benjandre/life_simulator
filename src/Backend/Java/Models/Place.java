@@ -1,4 +1,4 @@
-package Models;
+package Backend.Java.Models;
 
 public class Place {
 

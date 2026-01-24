@@ -1,8 +1,8 @@
-package Java.Items;
+package Backend.Java.Items;
 
 import java.util.ArrayList;
 
-import Backend.Models.Item;
+import Backend.Java.Models.Item;
 
 public class Refrigerator extends Item {
 

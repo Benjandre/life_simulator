@@ -1,4 +1,4 @@
-package Java.Items;
+package Backend.Java.Items;
 
 public class Toilet {
     

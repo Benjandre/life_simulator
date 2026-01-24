@@ -1,11 +1,11 @@
-package GameMechanics.Phone;
+package Backend.Java.GameMechanics.Phone;
 
 import java.util.Scanner;
 
 // Update the import path to the correct location of Player class
-import Models.Character;
-import GameMechanics.People.MainPlayer;
-import GameMechanics.People.OtherCharacter;
+import Backend.Java.Models.Character;
+import Backend.Java.GameMechanics.People.MainPlayer;
+import Backend.Java.GameMechanics.People.OtherCharacter;
 
 public class Call {
 

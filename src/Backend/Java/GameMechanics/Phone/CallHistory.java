@@ -1,4 +1,4 @@
-package GameMechanics.Phone;
+package Backend.Java.GameMechanics.Phone;
 
 public class CallHistory {
     private String caller;

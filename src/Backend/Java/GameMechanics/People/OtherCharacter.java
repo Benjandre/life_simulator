@@ -1,8 +1,8 @@
-package GameMechanics.People;
+package Backend.Java.GameMechanics.People;
 
-import Models.Relationship;
-import Models.Relationship.relationshipType;
-import Models.Character;
+import Backend.Java.Models.Relationship;
+import Backend.Java.Models.Relationship.relationshipType;
+import Backend.Java.Models.Character;
 
 public class OtherCharacter extends Character {
 

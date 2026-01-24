@@ -1,6 +1,6 @@
-package Java.Items;
+package Backend.Java.Items;
 
-import Backend.Models.Item;
+import Backend.Java.Models.Item;
 
 public class CuttingBoard extends Item {
 

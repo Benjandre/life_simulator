@@ -1,4 +1,4 @@
-package GameMechanics.TimeManagement;
+package Backend.Java.GameMechanics.TimeManagement;
 
 public class Turn {
 

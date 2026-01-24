@@ -1,6 +1,6 @@
-package Items;
+package Backend.Java.Items;
 
-import GameMechanics.People.MainPlayer;
+import Backend.Java.GameMechanics.People.MainPlayer;
 
 public class ToothBrush {
     

@@ -1,13 +1,13 @@
-package GameMechanics.Phone;
+package Backend.Java.GameMechanics.Phone;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import GameMechanics.Phone.Contact;
-import GameMechanics.Phone.Message;
-import GameMechanics.Phone.Message.messageType;
-import GameMechanics.Phone.Call;
-import GameMechanics.People.MainPlayer;
+import Backend.Java.GameMechanics.Phone.Contact;
+import Backend.Java.GameMechanics.Phone.Message;
+import Backend.Java.GameMechanics.Phone.Message.messageType;
+import Backend.Java.GameMechanics.Phone.Call;
+import Backend.Java.GameMechanics.People.MainPlayer;
 
 public class Phone {
 

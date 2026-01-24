@@ -1,4 +1,4 @@
-package GameMechanics.Relationship;
+package Backend.Java.GameMechanics.Relationship;
 
 public class Relationship {
 

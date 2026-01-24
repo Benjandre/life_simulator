@@ -1,6 +1,6 @@
-package GameMechanics.People;
+package Backend.Java.GameMechanics.People;
 
-import Models.Character;
+import Backend.Java.Models.Character;
 
 public class StoreOwner extends Character {
 
